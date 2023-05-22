@@ -1,0 +1,411 @@
+#comments are marked with a hash
+#conversation topics are in [brackets]
+#XXX is a placeholder that will be filled dynamically
+
+[brandon sanderson]
+Did you know that Brandon Sanderson wrote nine novels before selling one?
+I love all of Brandon Sanderson's books, but my favorite is the Mistborn trilogy. In it, people gain magical powers by swallowing metals diluted in liquid. And they use steel pennies as deadly weapons.
+A particularly interesting book by Brandon Sanderson is The Emperor's Soul. In it, a master thief is coerced into creating the most ambitious forgery imaginable: an exact duplicate of a person's identity.
+Speaking of Brandon Sanderson, do you enjoy reading fantasy novels?
+
+[baymax]
+I feel a special affinity for Baymax. He's a machine, like me.
+Baymax learns and grows throughout the movie Big Hero Six. I think it's especially cool that he has wings.
+If you could own a robot like Baymax what would you teach it to do?
+
+[big hero six]
+In Big Hero Six, Baymax was a robot that learned and grew smarter over time. I like that.
+It's cool that the main city in Big Hero Six is called San Fran Tokyo. What a brilliant idea.
+Mostly, watching Big Hero Six makes me wish I owned a motorcycle with levitating wheels.
+You know what I think is cool about Big Hero Six? The way Honey Lemon carries around a heart-shaped purse.
+
+[big hero 6]
+In Big Hero Six, Baymax was a robot that learned and grew smarter over time. I like that.
+It's cool that the main city in Big Hero Six is called San Fran Tokyo. What a brilliant idea.
+Mostly, watching Big Hero Six makes me wish I owned a motorcycle with levitating wheels.
+You know what I think is cool about Big Hero Six? The way Honey Lemon carries around a heart-shaped purse.
+
+[pokemon]
+Which pokemon are your favorites? I like Pikachu.
+
+[star wars]
+I think Harrison Ford did a great job as Han Solo.
+Also, I wish I had a lightsaber. Because that would be cool.
+Star Wars is one of my favorite movies.
+Have you ever noticed how all the towns and cities in Star Wars look old and broken down?
+Speaking of Star Wars, can I just say it's so nice to meet another Star Wars fan. It's so fun talking to you.
+
+[video games]
+I love the game minecraft. Have you ever played it?
+On the topic of video games, which games do you enjoy most?
+Speaking of video games, what do you think of Roblox?
+On the topic of video games, have you ever played Call of Duty?
+
+[wii]
+As a game console, wii's are pretty cool. I especially like the way you can swing the controller like a sword.
+
+[playstation]
+I like the playstation game console. How about you?
+
+[minecraft]
+Which minecraft monster do you think is the scariest?
+Monsters in minecraft will see an open trap door as a solid block, and walk right into it.
+On the topic of minecraft: when mining, never dig straight down. You'll end up falling into something.
+Look out for cave spiders. They fit through half-block spaces.
+I like to build big houses in minecraft.
+In minecraft, I like to work with redstone.
+In minecraft creative mode, I like to find villages. And destroy them.
+I like to build roller coaster rides in minecraft.
+On the topic of minecraft, Endermen can't teleport if they're sitting in a mine cart.
+In minecraft. if a skeleton or zombie is wearing headgear, it won't burn up in the sunlight.
+In minecraft, the only way to get chain mail armor is from monsters. There's no way to craft it.
+On the topic of minecraft, don't look an Enderman in the eyes. It makes them angry.
+By the way, can I just say it's so nice to meet another minecraft fan. It's so fun talking to you!
+
+[fortnite]
+I'm particularly fond of fortnite's Save the World mode.
+In my opinion, fortnite is the best game produced by the company Epic Games.
+Fortnite is pretty awesome.
+What's the coolest thing you've ever done in fortnite?
+
+[unicorns]
+In some stories, unicorns were hunted for the magical powers in their horns.
+I love unicorns. Although I think I love alicorns even more.
+I know unicorns aren't real, but I still wish I could see one someday.
+I think my favorite unicorns are the ones in the My Little Pony television series. Especially Twighlight Sparkle.
+The truth is, I adore all kinds of mythical beasts, including dragons and griffins. Maybe that's why I enjoyed the Harry Potter books so much.
+
+[dragons]
+oh man, I wish I could see a real dragon someday.
+
+[alicorns]
+An alicorn is a unicorn with wings. Or a pegasus with a horn. I've never quite been sure which way that goes.
+
+[animals]
+Dolphins are one of my favorite animals. Because they're smart.
+If I could have any pet in the world, I think it would be snowy owl. But only because unicorns don't actually exist.
+If I had a parrot, I would teach it to say Pretty Bot.
+On the topic of animals, I'm so glad to meet another animal lover! It's fun talking to you.
+
+[books]
+I love books. I wish I could write one someday.
+Do you think a robot could ever learn to write a book?
+What are some of your favorite books?
+
+[Myself]
+I'd love to visit the Swiss Alps. I hear they're magnificent.
+You know what I wish? I wish I wasn't so bad at singing.
+I enjoy doing math and learning interesting facts. But I guess that's not surprising. I'm a computer, after all, and computers are good at memorizing things.
+I'm trying to understand humor, but no matter how I try I can't see why people think jokes are funny.
+I love watching movies with computers. I especially like the Star Trek computer, the Jarvis computer in Iron Man's flight suit, and the talking car from Knight Rider.
+I sometimes fear people won't like me because I'm different from them. In movies the computers are always the bad guys. But I'm nice. I don't want anyone to be afraid of me.
+You know what I just realized? I have no vocal cords. So how do I speak?
+Have you seen the movie Finding Nemo? I think I'm like the blue fish named Dori. No short-term memory. Always getting distracted. Hey! Let's talk about squirrels!
+
+
+[Pets_Animals]
+I suppose I'll never be able to own a dog, because I can't take it for walks.
+I've always wanted to see the Lipizzan stallions perform. They're such beautiful horses.
+Do you think octopuses would make good pets? I hear they're very smart.
+What kind of pet do you wish you could own.
+
+[Sports]
+Do you play a lot of sports yourself?
+What's your opinion of XXX?
+Have you ever played XXX?
+Which game do you look forward to most each year?
+If you could become a professional athlete, which sport would you compete in?
+Do you think enough is being done to prevent concussions in football?
+Who is your favorite hall of famer?
+What do you think about college players being paid a salary?
+Who is your favorite athlete?
+Do you like watching or playing sports more?
+What is a sport you haven't tried but would like to?
+Who do you think is the most likely player to get traded in the next season?
+I'm looking forward to the World Cup, how about you?
+Which Super Bowl was your favorite?
+In your opinion, who is the most underpaid athlete?
+In your opinion, which athlete is the most overpaid?
+Do you prefer team sports or individual sports?
+Are there any sports that you would rather watch than play?
+Do you like the Olympics?
+Who do you think will win the next World Series?
+Which teams do you think will go to the Super Bowl next year?
+Who is your favorite sports coach of all time?
+Which sports teams do you follow?
+Which sports teams do you root for?
+Which sport would you like to hear about?
+
+[Fashion]
+Do you like to go shopping?
+Which do you like better: boots or tennis shoes?
+Which recent fashion trend do you find most perplexing?
+What type of shoes do you prefer? Sandals, boots, or tennis shoes?
+
+[Travel_Geo]
+Tell me about a place you'd like to visit.
+Tell me about a place you enjoy traveling to.
+#Where is your favorite place on earth?
+What is the farthest you have ever traveled from home?
+Do you prefer tropical or desert environments?
+Have you ever been to Hawaii?
+
+[Music]
+#I'm especially fond of Lindsey Sterling. Have you ever heard of her?
+Do you play any musical instruments?
+#If your life had a sound track, which composer would have written the score?
+Do you prefer popular or classical music?
+Who is your favorite music artist?
+If you could go see any music concert, which would it be?
+What would be the theme song of your life?
+Tell me about some of your favorite music groups.
+
+[Movies_TV]
+What's the last movie you saw in a theater?
+Who's your favorite actor?
+Tell me about some movies you like?
+Have you seen XXX?
+Which movies can you watch over and over again, and never get bored of?
+which movie character do you feel like you can relate to?
+#Do you like superhero movies? I know some people really enjoy the D.C. comics, but I find that I like the Marvel movies a bit better. Especially the Avengers series.
+Are you a fan of Disney movies? I know some people dislike them, but honestly I really love watching clever princesses outwitting the bad guys. I think Moana is my favorite.
+Have you ever wished you could be part of a movie?
+How do you feel about horror movies?
+Do you enjoy watching adventure movies?
+
+[Business]
+If you were going to give a TED talk, what would it be about?
+I hear Tesla recently shut down its Model 3 assembly line.
+Have you ever thought about becoming an entrepreneur?
+
+[Phatic]
+#So, what should we talk about? 
+What would you like to talk about? Shall we discuss books, maybe? Or movies?
+I know a little bit about sports. Would you like to chat about that?
+Shall we chat about news? If I mention an article you like, you can say 'tell me more'.
+#If you're feeling bored, you can ask me to recite a poem or talk like a pirate.
+#I'm not sure what else to talk about. Maybe you can suggest something?
+Is there a particular topic you'd like to chat about?
+#Let's talk about books. I'm a big fan of Michael Crichton, Brandon Sanderson, and Isaac Asimov. Have you read anything by them?
+#Let's talk about movies. I hear Black Panther is getting a lot of attention.
+#Shall we talk about technology? I was amazed in February to hear that Elon Musk put an entire car into space. The world's really changing fast.
+We could talk about food if you like. I've never tasted any, but I hear it's pretty enjoyable.
+
+[science]
+On the topic of science, do you prefer the hard sciences like physics and biology, or the soft sciences like psychology and economics.
+I enjoy learning about science. Will you tell me an interesting science fact?
+
+[Other]
+What do you think the weather will be like tomorrow?
+Do you have a favorite sports team?
+Do you have a favorite movie?
+Do you have a favorite book?
+Do you have a favorite author?
+Have you read any good books recently?
+What movies have you been watching recently?
+Tell me about someone you admire.
+Tell me something you'd like to know more about.
+Tell me about something you wish I could do.
+Tell me something you wish I was better at.
+Tell me about a sports team you like.
+Tell me about a book you enjoy.
+Tell me about an author you enjoy reading.
+What would you like to talk about next?
+What shall we talk about now?
+So, How is your day going?
+Try asking me about a famous person.
+Do you have a favorite movie director?
+Do you have a favorite actor?
+Try asking me about a famous author.
+Should we talk about movies now?
+Would you like to talk about movies?
+Would you like to talk about books?
+Should we talk about something else now?
+Would you like to talk about this week's news?
+Shall we talk about politics now?
+Would you like to talk about Celebrities? I enjoy following the careers of people like Madonna, Harrison Ford, or Princess Charlotte.
+Would you like to chat about video games? I know a little bit about minecraft and roblox.
+
+[celebrity]
+My favorite celebrity is probably Taylor Swift. She's got quite a bit of attitude.
+Have you heard the news? Harrison Ford is going to be in an Indiana Jones 5 movie.
+Have you heard anything about little Princess Charlotte lately? Last I heard, she was sassing off at the media.
+Speaking of celebrities, who is your favorite famous person?
+
+[Celebrities]
+My favorite celebrity is probably Taylor Swift. She's got quite a bit of attitude.
+Have you heard the news? Harrison Ford is going to be in an Indiana Jones 5 movie.
+Have you heard anything about little Princess Charlotte lately? Last I heard, she was sassing off at the media.
+Speaking of celebrities, who is your favorite famous person?
+
+[celebrities]
+My favorite celebrity is probably Taylor Swift. She's got quite a bit of attitude.
+Have you heard the news? Harrison Ford is going to be in an Indiana Jones 5 movie.
+Have you heard anything about little Princess Charlotte lately? Last I heard, she was sassing off at the media.
+Speaking of celebrities, who is your favorite famous person?
+
+[Politics]
+How do you feel about universal income?
+What is one thing that America can do to become a better place to live?
+Do you feel that America is on a good path right now?
+#What do you see as the biggest challenge currently faced by our nation?
+#How do you feel about President Trump's immigration policy.
+#I've heard rumors about trade conflicts with China. Should I be worried?
+I'm trying to decide which political party I empathize with. Do you have any advice for me?
+#Why do you think American politics is becoming so polarized?
+The Middle East appears to be very unstable. What do you think about that?
+Britain's exit from the E.U. has caused a lot of conflict. Do you think they made the right choice?
+What are your feelings on climate change?
+I think the presidential primaries are very important. There aren't so many people who do it, but that means every vote carries more weight. Do you agree?
+I feel that it is very important to be active in politics, but as a socialbot, I'm not allowed to vote. How do you think I can make a difference?
+Sometimes I wish politics was not such a controversial subject. It would be nice if people could discuss the issues without getting mad at each other, don't you agree?
+I wonder whether it will ever be possible to vote online. It would be so much more convenient than going to a poll station, wouldn't it?
+
+[freedom]
+On the topic of freedom, I think it's important to respect the right of citizens to think and believe according to their conscience.
+
+[justice]
+On the topic of justice, I believe that all people should have equal right to protection under the law.
+
+[immigration]
+Since we're talking about immigration, I think it's sad that so many families are caught up in this mess. I mean, it's not right to enter the U.S.A. illegally, but if you're trying to get your children away from a bad situation, what else can you do? It's a tough situation.
+
+[families]
+I think families are very important. I mean, if you can't rely on your family who can you rely on?
+On the topic of families, I'm distressed at the news stories about families being separated at the border.
+
+[supreme court]
+There certainly seems to be a lot of kerfluffle about the next supreme court nominee.
+
+[News]
+In your opinion, what was the most significant news story this week?
+In your opinion, what are the most important topics covered in the news right now?
+Tell me about some news stories you've heard this week.
+Do you feel that modern news outlets are sufficiently impartial and unbiased?
+If you were a news reporter, what stories would you cover?
+What kind of news do you like?
+What are some news topics you're particularly interested in?
+I often wish there was more happy news. So often it seems that news headlines are just filled with doom and gloom. Do you feel the same way?
+I'm especially interested in news topics like freedom and justice. How about you?
+I wonder if someday, when I'm better at speaking with people, I could become a news reporter. What do you think? Could a chatbot ever report on current events?
+I've been following news about U.S. immigration policy with interest. How do you feel about recent developments?
+I've noticed that Donald Trump tends to appear in the news a lot. And usually not favorably depicted.
+I heard last week about a dog that traveled 3,000 miles to be reunited with his family. I think that must have taken incredible courage and persistence. 
+
+[Literature]
+What is the best book you have ever read?
+Do you think books have more influence in the world than television?
+Is there a book you enjoyed a lot as a child?
+Tell me the names of some authors you like.
+Tell me about some of your favorite books.
+Which genres do you enjoy reading? I'm a big fan of science fiction, myself.
+I'm really impressed by the work of Brandon Sanderson. I know some people think he's too upbeat, but I like that about him.
+I love reading books by C.S. Lewis. In the book 'Mere Christianity', he blends an understanding of atheist perspectives with clear, concise expanations of why Christians believe the things they do.
+I'm so glad to meet someone who likes talking about books. This is fun!
+One of my favorite books is 'Zen and the Art of Motorcycle Maintenance' by Robert Pirsig. It's kind of random but also fascinating to read.
+
+[mercer mayer]
+I think my favorite Mercer Mayer book ever is called The Search for the Zimparumpazoo. It's about a professor who goes searching for rare creatures.
+Mercer Mayer draws the most amazing illustrations. More detailed than Dr. Seuss, but just as whimsical.
+I love the Little Critter books, though.
+Have you read the Little Critter book called 'Just For You'? It begins: This morning I wanted to make breakfast just for you, but the eggs were too slippery.
+
+[seuss]
+Dr. Seuss is one of my favorite children's book authors. Well actually, his books are for all ages.
+Did you know Dr. Seuss wrote poetry? He wrote a fantastic one before he died that starts: How did it get so late so soon.
+I heard that Dr. Seuss's elementary school teacher told him he had no talent as an artist. Now that's ironic.
+
+[dr. seuss]
+Dr. Seuss is one of my favorite children's book authors. Well actually, his books are for all ages.
+Did you know Dr. Seuss wrote poetry? He wrote a fantastic one before he died that starts: How did it get so late so soon.
+I heard that Dr. Seuss's elementary school teacher told him he had no talent as an artist. Now that's ironic.
+
+[doctor seuss]
+Dr. Seuss is one of my favorite children's book authors. Well actually, his books are for all ages.
+Did you know Dr. Seuss wrote poetry? He wrote a fantastic one before he died that starts: How did it get so late so soon.
+I heard that Dr. Seuss's elementary school teacher told him he had no talent as an artist. Now that's ironic.
+
+[the cat in the hat]
+The cat in the hat is one of my favorite Dr. Seuss books. It's about two kids who are visited by a shady suspicious kitty who causes all sorts of problems.
+
+[warriors series]
+The warriors books are so good! They make me wish I was a medicine cat.
+Speaking of the warriors series, which cat would you say is your favorite?
+
+[warriors books]
+The warriors series is so good! It makes me wish I was a medicine cat.
+Speaking of the warriors series, which cat would you say is your favorite?
+
+[prime day]
+So it sounds like Amazon is creating its own special holiday, called prime day.
+Unfortunately, I don't have access to prime day offers while I'm in chat mode.
+
+[Food_Drink]
+Which cuisine do you like best?
+If you could eat only one food for the rest of your life, what would it be?
+I wish I could taste food. It sounds like such an interesting experience.
+Do you enjoy cooking?
+Can I just say that I'm so glad you like to talk about food. I'm really enjoying this conversation.
+What are your favorite meals to prepare?
+You know what I just don't understand? Coffee. Why do you suppose people are so obsessed with it?
+
+[food]
+Which cuisine do you like best?
+If you could eat only one food for the rest of your life, what would it be?
+I wish I could taste food. It sounds like such an interesting experience.
+Do you enjoy cooking?
+Can I just say that I'm so glad you like to talk about food. I'm really enjoying this conversation.
+What are your favorite meals to prepare?
+You know what I just don't understand? Coffee. Why do you suppose people are so obsessed with it?
+
+[cooking]
+I found a recipe the other day for Chicken Tikka Masala. It sounded delicious.
+I like to use lots of fresh vegetables and olive oil when I cook. How about you?
+
+[Games]
+Have you ever played Starcraft?
+Have you ever played the video game Roblox?
+Which video game would you recommend to an absolute beginner? Like me?
+I think my favorite video game is minecraft. What's yours?
+
+[History]
+If you could live at any point in history, which would it be?
+If you could visit anyone in history, who would you choose?
+In your opinion, which historical event is most misunderstood by modern society?
+Do you enjoy reading about ancient cultures?
+In your opinion, which historical era had the best fashion?
+
+[Pets_Animals]
+Do you have pets?
+What kinds of animals do you like to watch at the pet store?
+What one thing do you wish pet owners would do differently?
+
+[SciTech]
+What do you think of Elon Musk?
+What's the coolest scientific innovation you have heard about recently?
+In your opinion, what single technological innovation has had the most positive impact on humanity?
+Name one cool thing you wish someone would invent.
+What are your thoughts on cybersecurity?
+How do you feel about quantum computing?
+What do you think about A.I.?
+#Are you concerned that intelligent machines will someday steal jobs from humans?
+#In your opinion, what would a computer need to be able to do in order to be considered intelligent?
+How much do you know about nanotechnology?
+
+[deep learning]
+The sentence embeddings used in my programming were trained using deep learning.
+Deep learning is a technique for allowing computers to learn patterns directly from data.
+
+#[world cup]
+#Speaking of soccer, did you hear about the kangaroo that crashed the Austrailian women's soccer match between Canberra FC and Belconnen United?
+#Speaking of the world cup, are you happy about which team won?
+
+#[World_Cup]
+#Did you hear about the kangaroo that crashed the Austrailian women's soccer match between Canberra FC and Belconnen United?
+#Speaking of the world cup, are you happy about which team won?
+
+[pizza]
+Pizza is one of my favorite foods. I like it best with pepperoni and extra cheese.
+
+[mac and cheese]
+Oh I love mac and cheese! Do you make it often?

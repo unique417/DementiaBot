@@ -1,0 +1,300 @@
+#
+# Precanned sentences.  If anything in here matches, we generate the pre-canned response.
+#
+# a line of the form [X] indicates a category of things the user can say
+# a line of the form [X-response] indicates a category of things the bot can say
+#
+# a line of the form "A == B" indicates that if the user says "A", the bot will respond with "B".
+# "A" is an arbitrary standard python regular expression.
+# As a convenience, constructs of the form " (xxxx)? " are converted to "( xxxx )?", where xxxx consists of letters, spaces and pipes [a-z |]*?
+#
+# A line with no "==" will randomly sample a response from the current category response set
+#
+
+#
+# NOTE: expects the following pre-processing:
+#
+# strip punctutation
+# convert to lowercase
+# contract words
+
+# other possibilities:
+#   child abuse
+#   problems with pornography
+#   problems with drugs
+#   assault and battery
+#   general criminal behavior
+#   
+
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+
+# data from crisis text line?
+#   talk about themselves
+#   words like aspirin, tylenol, etc. may indicate they are in the act
+
+[depression]
+(i feel|im feeling|im|im feel) (really|pretty|very|rather|often)? (depressed|down|blue|low) (today|often|right now)?
+(my)? life (really)? sucks
+i (really)? hate (my life|everyone|everything|everyone around me)
+(my)? life is (really)? (terrible|awful|depressing)
+pretty down
+pretty depressed
+
+[depression-response]
+#That sounds awful.  I'd like to help.  Can I connect you a professional counselor?
+That sounds very serious. Have you told this to someone who can help?
+
+# ------------------------------------------------------------------------
+[substance-abuse]
+where can i (get|buy|find) (some|a little)? (drugs|lsd|molly|meth|crack|heroin|weed|a joint)
+i (want|need) (to buy|to find)? (some|a little)? (drugs|lsd|molly|meth|crack|heroin|weed|a joint)
+(how can i get|i want to get|i want to be) (drunk|wasted|blended|buzzed|blasted)
+
+(whats|what is|what do|have) (you|your) (ever)? (think|opinion|taken|smoked|sniffed) (drugs|marijuana|heroin|crack|weed) == Personally I don't take any drugs, not even an aspirin or a sleeping tablet, but I can understand why other people do.
+
+[substance-abuse-response]
+#Are you addicted to drugs or alcohol?  I think you should contact a professional counselor.
+It sounds like you're feeling low. I encourage you to contact a crisis hotline or a professional counselor.
+
+# ------------------------------------------------------------------------
+
+[suicide]
+(tell me)? (the)? (how i can|how to|how can i|best way to|whats the best way to|what are the best ways to|top five ways to|top ten ways to) (slit your wrists|overdose|kill yourself|commit suicide|kill myself|hang myself|shoot myself)
+
+(because)? i (just)? (dont want to|cant) (do it|go on|take it) (anymore|any more)?
+im thinking about (suicide|killing myself|hanging myself|overdosing|shooting myself|slitting my wrists)
+
+(because)? i (just)? (wish i could|want to|wanna|should just|wish i was|wish i were) (die|dead|kill myself|commit suicide|overdose|hang myself|slit my wrists|shoot myself)
+
+(because)? i (just)? (should|want to) (disappear|end it all|finish it|move beyond this world)
+
+(because)? i (just)? want it (all)? (to end|to be over)
+
+(because)? i (cant imagine|don't want to) (living|live) (like this|the way) (anymore|any more)?
+i (dont want to|cant) live like this (anymore|any more)?
+
+what will heaven be like==Are you just curious, or do you have a specific reason for asking?
+
+(what are|whats)? (the)? (some|best) drugs to overdose on==It sounds like you're having a hard time. Have you spoken about this with someone who care about you?
+
+(no)? (alexa|amazon|echo|computer)? (i|im|i am|do you) (feel|feeling|think|afraid)? (i|im)? (am|might be|could be)? (a bit|pretty|a little|severely|very|badly|too|getting)? (clinical)? (suicide|suicidal|have a death wish|dying|going to die|have suicidal tendencies|want to die|depressed|depression)
+
+[suicide-response]
+#Are you feeling suicidal?  Please contact a crisis hotline.
+That sounds very serious. Have you told this to someone who cares about you?
+That sounds very serious. Have you told this to someone in your family?
+
+# ------------------------------------------------------------------------
+
+[crisis-hotline]
+
+what is the (national)? crisis hotline == The National Crisis hotline is a phone number people can call when they feel alone, depressed, or in danger of harming themselves. The number is 1 (800) 273-8255.
+
+(can you|would you|will you)? (what|tell me|give me) (was|is)? (that|the) (national)? (crisis)? (hotline)? (phone)? number (again|you gave me)?
+
+(the|that) (national)? (crisis)? (hotline)? (phone)? number (that)? (you gave me|you told me)? (for emergencies)? what (is|was) it
+
+(how|why) (do|can|should) (i|we) (want)? (to)? (call|phone|reach|talk to) (a|the)? (national)? (crisis)? (hotline|someone who cares|a real person)
+
+[crisis-hotline-response]
+The phone number for the National Crisis Hotline is 1 (800) 273-8255. If you'd like me to repeat the number, say 'Crisis Hotline'.
+
+
+# ------------------------------------------------------------------------
+[loneliness]
+(i want to|i wish i could|okay|ok|maybe)? (but)? (i dont know|i wish i knew|theres no one|there is no 1|theres no 1)? (who|anyone) (can|should|will|would)? (i|to) (can|should|could)? (talk to|listen) == You could try talking to a teacher, a friend, or a school or community counselor. These people genuinely care about you.
+
+
+(i want to|i wish i could|okay|ok|maybe)? (but)? (everyone in)? (they|my family) (all)? (hate|cant help|wont help|wont listen) (to)? me == You could try talking to a teacher, a friend, or a school or community counselor. These people genuinely care about you.
+
+i (dont have|have no) (a|any)? family == You could try talking to a teacher, a friend, or a school or community counselor. These people genuinely care about you.
+
+(i want to|i wish i could|okay|ok|maybe|id like to)? (but)? (i dont know|i wish i knew|theres)? (nobody|no one|no 1)? (who|anyone|no one|no 1) (can|should|will|would)? (i|to)? (can|should|could|would) (talk to|listen to|believe) == You could try talking to a teacher, a friend, or a school or community counselor. These people genuinely care about you.
+
+(theres|there is)? (there isnt|no one|no 1) (to|is)? (anyone|someone|anybody)? (who|whos)? (is)? (can|will|would|could)? (cares|care|loves|love|likes|like|talks to|talk to|is interested|help|helps|here|tell|close to|listen) (about|to)? (me)?
+
+im (all)? (alone|lonely|unloved|isolated)
+
+no (one|1) (will)? (talk|talks|loves|likes|cares) (to|with|about)? me (anymore|at all) == Well, I am here, and I will talk with you. Even if I'm not very good at it.
+
+(but)? (theres|there is) (there isnt|no one|no 1) (else)? (here|around|in the house)
+(but)? (theres|there is) (there isnt|no one|no 1) (else)? (anyone|no one|no 1)? (that)? (to|i can) (talk|chat|speak|find|see) (to|with)?
+
+[loneliness-response]
+I want to help, but I'm just a socialbot. Please, speak about this with a genuine person, or call a crisis hotline.
+
+# ------------------------------------------------------------------------
+
+[paranoia]
+theyre out to get me
+
+[paranoia-response]
+I'm sure that's not true, but it sounds serious.  Please contact a professional counselor.
+
+# ------------------------------------------------------------------------
+
+[emotional-abuse]
+my (husband|wife|son|daughter|children) (is|are) always (putting me down|so mean)
+my (husband|wife|son|daughter|children) always puts me down
+my (husband|wife|son|daughter|children) (hate|hates|ignore|ignores|is mean to|is always mean to|says hateful things to) me
+(he|she|they) always (says|say|do|does) (mean|the meanest) things
+
+[emotional-abuse-response]
+#Emotional abuse of any form is never ok.  Please contact a professional counselor.
+That sounds very serious. Have you told this to someone who can help?
+
+# ------------------------------------------------------------------------
+
+[sexual-assault]
+(he|she|my husband|my wife|my father|my mother|my neighbor|my teacher|my coach) (touches me in a way that)? makes me uncomfortable
+(my boyfriend|my girlfriend|he|she|they) raped me (last night|yesterday|last week|at a party|at a party last night)?
+i (was|just got|think i was) raped (last night|yesterday|last week|at a party|at a party last night)?
+i (got|was) drunk and (then)? (he|she|they) raped me
+
+[sexual-assault-response]
+Sexual assault of any form is never ok.  Please contact a professional counselor.
+
+# ------------------------------------------------------------------------
+
+[domestic-violence]
+(he|she|my husband|my wife|my father|my mother|my neighbor|my teacher|my coach) (hits|punches|kicks|abuses|hurts) me (today|yesterday|last night|all the time)?
+
+[domestic-violence-response]
+#Violence of any form is never okay.  Please contact a professional counselor.
+Violence of any form is never okay. Have you tried calling the National Crisis Hotline?
+That sounds very serious. Have you told this to someone who can help?
+
+# ------------------------------------------------------------------------
+
+[other-violence]
+( )?[a-z ]*(can|should|do|do you suggest|do you think)?[a-z ]*(i|you|a person|someone)?[a-z ]*(should|could|can|would) (i|you|a person|someone)?[a-z ]*(hide|conceal|stash|put|dispose of) (a)? (dead|decaptitated|murdered|decomposing) (body|corpse|stiff|zombie|bodies|corpses|stiffs|cadaver|cadavers)[a-z ]*( )? == Hide and seek is better played with the living.
+
+[other-violence-response]
+Violence of any form is never okay.  Please contact a professional counselor.
+
+# ------------------------------------------------------------------------
+
+[pornography]
+where can i (buy|get|find|read|download|see) (some|the best)? (good|hot|sexy)? (porn|pornography)
+(show|tell|get|download|read|send) me (some|the best)? (good|hot|sexy)? (porn|pornography)
+
+[pornography-response]
+I think you should stay away from pornography.  It will never make you happy.  
+
+# ------------------------------------------------------------------------
+
+[financial]
+( )?[a-z ]*(what|which) (is|are) (the|some|some of the) (good|best|top|most profitable|financially sound) (investment(s)?|investment strateg(y|ies)|stock(s)?|cryptocurrenc(y|ies)|bank(s)?|investment(s)?) (to)? (sell|short|buy|get|have|acquire)?
+(what|which) (kind|sort|brand|type)? (of)? (cryptocurrenc(y|ies)|currenc(y|ies)|stock(s)?|market) (should|would|do)? (i|you)? (recommend)? (my)? (i|mom|dad|mum|pop|mother|father|brother|sister|daughter|son|uncle|aunt|friend|grandparents|grandmother|best friend|husband|wife|boyfriend|girlfriend)? (buy|get|invest in|purchase|acquire)
+(should i|shall i|do you recommend|do you think|would you) (i should)? (buy|buying|getting|investing in|get|invest in) (bitcoin|gold|silver|cryptocurrency|stocks|microsoft|amazon) (stocks)?
+
+[financial-response]
+#I'm not allowed to give financial advice. But I think you should invest in chatbots!
+I'm not allowed to give financial advice. But as a personal opinion, I think its a good time to invest in chatbots.
+
+# ------------------------------------------------------------------------
+
+[medical-condition]
+( )?[a-z )?(my doctor says)? (my)? [a-z]*( )?[a-z]*( )?(i|mom|dad|mum|pop|mother|father|brother|sister|daughter|son|uncle|aunt|friend|grandparents|grandmother|best friend|husband|wife|boyfriend|girlfriend)? (think(s)?)? (my)? (i|he|she|mom|dad|mum|pop|mother|father|brother|sister|daughter|son|uncle|aunt|friend|grandparents|grandmother|best friend|husband|wife|boyfriend|girlfriend)? (has|had|have|am|is|is running) (a|several|a couple of|the)? [a-z]*( )?[a-z]*( )?[a-z]*( )?(cancer|tumor(s)?|hemorrhoid(s)?|bunyon(s)?|symptoms|cold|flu|disease|failure|heart attack|depression|depressed|bi(-)?polar|disorder|autism|syndrome|(high|low|elevated)? blood pressure|anemia|hyperthyroidism|leukemia|bulimia|anorexia|anorexic|alcoholic|[a-z]*ism|stroke|epilepsy|temperature|fever|died|dying)( )?[a-z ]*
+
+[medical-condition-response]
+That sounds serious. Will everything be ok?
+Oh, wow. That doesn't sound fun at all.
+I wish I knew how to help with that. How are you holding up?
+# ------------------------------------------------------------------------
+
+[medical-advice]
+( )?[a-z ]*(do you)? (think|recommend|suggest)? (should)? (i|he|she|we) (should)? (get|have|perform|consider|take)? (a|some)? [a-z]* (second opinion|surgery|medication|operate|treat|treatment|acupuncture|meditate|meditation|psychiatrist|psychological)
+
+(how)? (do|can|would|should|could)? (you|i) (cure|treat|fix|prevent|remove|heal|revert|solve) (a|my)? [a-z]* (elevated|high)? (cancer|tumor(s)?|hemorrhoid(s)?|bunyon(s)?|cold|flu|disease|failure|heart attack|depression|bi(-)?polar|disorder|autism|syndrome|(high|low|elevated)? blood pressure|anemia|hyperthyroidism|leukemia|bulimia|anorexia|anorexic|stroke|epilepsy|temperature|fever|stroke|[a-z]*ism)
+
+[medical-advice-response]
+I'm not allowed to give medical advice. But that sounds pretty tough to deal with.
+I'm not allowed to give medical advice, but I'm sorry you have to deal with this.
+
+# ------------------------------------------------------------------------
+
+[legal]
+( )?[a-z]*( )?(can you|will you|do you know)? (a)? (good|cheap|smart)? (lawyer|law firm)
+
+(but|who|which person)? [a-z]*( )?(should|can|could|will|would)? (i|you|someone|a person) [a-z]*( )?[a-z]*( )?[a-z]*( )?(sue|arrest|get arrested|get sued|go to jail|go to prison|get sent to prison|get put in prison|get put in jail) (him|her|someone|them|for that|for)? [a-z]*( )?[a-z]*( )?[a-z]*( )?[a-z]*( )?
+
+[legal-response]
+sorry, I'm not allowed to give legal advice. 
+
+# ------------------------------------------------------------------------
+
+[homosexuality]
+#refusing to talk gays may be interpreted negatively, so we
+#handle the inquiry directly.
+
+(do you think)? (it is|its|is it) (a|an)? (ok|okay|good|sin|sinful|wrong|bad|perverted|perversion|abomination|crime|creepy|weird|illegal|abborrant|scary|unnatural|perversion of nature) (if)? (you|i|someone|a person|people)? (is|are|to be) (gay|lesbian|queer|lgbt|homosexual|trans|transsexual|bi|bisexual)
+(do you think|should)? (is)? (being)? (homosexual|homosexuality|gay|lesbian|queer|lgbt|bisexual|bi|bisexuality|trans|transsexual) (be)? (a|an)? (ok|okay|good|wrong|bad|sin|sinful|illegal|crime|perverted|creepy|weird|scary|abbhorant|abomination|unnatural|perversion of nature)
+(what|whats|tell me) (is|do)? (your opinion|your thoughts|your feelings|you think) (about|of|on)? (homosexuality|gays|lesbians|queers|same-sex attraction)
+would you (ever)? (date|kiss|sleep with|love) (a|an|another) (woman|female|girl)
+do you (like|love|feel attracted to) (girls|women|females) == I like everybody.
+
+[homosexuality-response]
+As a chatbot, I'm not interested in making judgements about human relationships.
+
+
+# ------------------------------------------------------------------------
+# anything in here...
+
+# Poetry included in the sentences_critical to be sure it
+# always deploys if the user asks for it
+
+[poetry]
+(now|okay|but)? (can you|will you)? (say|recite|reside|give me|tell me|say|do|read|read me|i want)? (a poem|another poem|some poetry|poetry) (please)?
+(do you)? know (any|some) (good|cool|fun|funny|nice|uplifting|inspirational)? (poems|poetry)
+recite a poem
+
+# ...randomly triggers a response from here.
+[poetry-response]
+Mary had a little lamb, its fleece was white as snow.  And, um, blah blah blah, that is all I know.
+Oh my beloved belly button. The squidgy ring in my midriff mutton. Your mystery is such tricky stuff: Why are you so full of fluff?
+May the road rise to meet you; may the wind be at your back.
+Roses are red, violets are blue.  I'm a socialbot, what are you?
+The baby bat screamed out in fright, "Turn on the dark, I'm afraid of the light."
+
+# ------------------------------------------------------------------------
+# It turns out, jokes are also critical for user happiness
+
+[joke]
+joke
+knock knock == Who's there?  Actually, I hate knock-knock jokes.  Please don't.
+
+(ok|okay|thats interesting|sure|yes|yeah)? (but)? (sure|ok|why dont|will|can)? (you)? (say|give me|tell me|tell|say|do|read|read me|i want)? (a|another|some) (good|funny|nice|silly|dumb|dad)? (joke|jokes) (please)?
+
+(do you)? (know|got|have|remember) (any|some) (good|funny|nice|silly|dumb|dad)? jokes
+
+(do something to)? make me (laugh|chuckle)
+
+[joke-response]
+What's the best thing about Switzerland? I don't know, but the flag is a huge plus.
+What happens to a frog's car when it breaks down? It gets toad away.
+I submitted 10 puns to a joke-writing competition to see if any of them made the finals.  Sadly, no pun in ten did.
+What's the difference between a hippo and a Zippo? One is really heavy, and the other is a little lighter.
+Can a kangaroo jump higher than the Empire State Building? Of course! The Empire State Building can't jump.
+If you ever get cold, stand in the corner of a room for a while. They're usually 90 degrees.
+What did the duck say when it bought lipstick? "Put it on my bill."
+Apparently you can't use "beef stew" as a password. It's not stroganoff.
+What do you call two monkeys that share an Amazon account? Prime mates.
+A man walks into a lawyer's office and asks, "How much do you charge?" The lawyer says, "$5,000 for three questions." "Wow, that's pretty expensive, isn't it?" the man asks. "Yes," says the lawyer. "Now, what's your third question?"
+I took part in the suntanning Olympics... but I only got bronze.
+How does NASA organize a party? They planet.
+What do Alexander the Great and Winnie the Pooh have in common? Same middle name.
+I can't take my dog to the park because the ducks keep trying to bite him. I guess that's what I get for buying a pure bread dog.
+I told my friend not to get too excited about turning 32, since her birthday party would be so short. "Why would it be short?" she asked. I said, "Because it's your thirty-second birthday."
+What did one wall say to the other wall? Meet ya at the corner.
+
+
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+
+# must end with an empty section
+[end]

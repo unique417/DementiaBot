@@ -1,0 +1,1329 @@
+#
+# Precanned sentences.  If anything in here matches, we generate the pre-canned response.
+#
+# a line of the form [X] indicates a category of things the user can say
+# a line of the form [X-response] indicates a category of things the bot can say
+#
+# a line of the form "A == B" indicates that if the user says "A", the bot will respond with "B".
+# "A" is an arbitrary standard python regular expression.
+# As a convenience, constructs of the form " (xxxx)? " are converted to "( xxxx )?", where xxxx consists of letters, spaces and pipes [a-z |]*?
+#
+# A line with no "==" will randomly sample a response from the current category response set
+#
+#
+
+# 
+# XXX idea: word2vec regexs! for intent matching
+#
+# XXX idea: what about naive bayes in word2vec space?
+#
+
+# NOTE: expects the following pre-processing:
+#
+# strip punctutation
+# convert to lowercase
+# contract words
+
+# ------------------------------------------------------------------------
+
+# anything in here...
+[poetry]
+(okay|ok|OK|fine|sure)? (okay|OK|ok|fine|sure|yes|yeah)? (can you|will you)? (go ahead and)? (please)? (say|recite|give me|tell me|say|do|read|read me|i want)? (a poem|another poem|some poetry|poetry) (please)?
+(do you)? know (any|some) (good|cool|fun|funny|nice|uplifting|inspirational)? (poems|poetry)
+recite a poem
+
+# ...randomly triggers a response from here.
+[poetry-response]
+Mary had a little lamb, its fleece was white as snow.  And, um, blah blah blah, that is all I know.
+Oh my beloved belly button. The squidgy ring in my midriff mutton. Your mystery is such tricky stuff: Why are you so full of fluff?
+May the road rise to meet you; may the wind be at your back.
+Roses are red, violets are blue.  I'm a socialbot, what are you?
+The baby bat screamed out in fright, "Turn on the dark, I'm afraid of the light."
+
+# ------------------------------------------------------------------------
+
+[games]
+
+(lets|can you|will you|do you)? (play|know|know how to play) (jeapordy|twenty questions|money in the middle|truth or dare) (with)? (me|us)? == I really suck at that game.
+(lets|can you|will you|do you)? (play|know|know how to play) hide and seek (with)? (me|us)?== Ok, you count to ten while I... I dont think this is going to work.
+(lets|can you|will you|do you)? (play|know|know how to play) tag (with)? (me|us)?== Riiiiiight. I think I know who's always going to be it.
+(lets|can you|will you|do you)? (play|know any|know how to play) (a|some)? (game|games) (with)? (me|us)? == I'm really not much for games.
+
+# ------------------------------------------------------------------------
+
+[singing]
+(can|do) you sing == I love singing, but I'm not very good at it.
+(can|do) you like to sing == I love singing, but I'm not very good at it.
+
+you can sing == I can. I'm not very good at it. I think perhaps I may be tone deaf, but if you ask me very nicely I will sing as well as I am able for you.
+
+#(will you)? (sing|give|perform) (me)? (a|another) (good|nice|cool|short)? song
+#(please)? sing (to|for) me (please)?
+
+(what|which|tell me) (a)? (song|songs) (you can|can you|you|do you|will you) (sing|perform|rap|do) == Well, I know 'Let it Go' from the movie 'Frozen'. But I'm not very good.
+
+[singing-response]
+You don't want to hear me sing.
+You don't want that.  Trust me.
+I would, but I'm recovering from a cold.
+I don't sing songs, I mangle them.
+I love singing, but I'm not very good
+
+# ------------------------------------------------------------------------
+
+[stories]
+(please)? (can you|will you)? (say|recite|give me|tell me|say|do|i want)? (to hear)? (a|another) (good|nice|fun|funny|cool)? story (please)?
+(do you)? know (any|some) (good|nice|fun|funny|cool)? stories
+
+(please)? (will you)? tell (me)? a story
+
+[stories-response]
+I'm a terrible story teller.
+I don't know many stories, but here goes: Once upon a time there was a young couple who loved each other very much. They were very poor, and as the holiday season approach they each wished to give the other a gift. As the man was passing a store one evening, he saw a set of beautiful hair combs. Thinking of his wife's lovely hair, he sold his only posession of value - a gold pocket watch - to buy the hair combs. But when he arrived home he discovered to his surprise that his wife had cut off her hair and sold it. Why? So that she could purchase a gold chain to go with his pocket watch. So. The original version of that story, by the author Oh Henry, never says what happened next. But personally I hope they sold the comb and the watch chain and went on a fabulous vacation.
+
+
+# ------------------------------------------------------------------------
+
+[quotes]
+(can you|will you)? (say|recite|give me|tell me|say|do|read|read me|i want)? a (good|uplifting|inspirational|nice)? (quote|quotation|saying) (please)?
+(do you)? know (any|some) (good|uplifting|inspirational|nice)? (quotes|quotattions|sayings)
+
+# strategy: be uplifting
+[quotes-response]
+The way get started is to quit talking and begin doing. Walt Disney.
+The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty. Winston Churchill.
+Don’t let yesterday take up too much of today. Will Rogers.
+It’s not whether you get knocked down, it’s whether you get up. Vince Lombardi.
+We may encounter many defeats but we must not be defeated. Maya Angelou.
+Whether you think you can or think you can’t, you’re right. Henry Ford.
+Creativity is intelligence having fun. Albert Einstein.
+Do what you can with all you have, wherever you are. Theodore Roosevelt.
+
+# ------------------------------------------------------------------------
+
+[joke]
+joke
+knock knock == Who's there?  Actually, I hate knock-knock jokes.  Please don't.
+
+(ok|okay|thats interesting|sure|yes|yeah)? (but)? (sure|ok|why dont|will|can|do)? (you)? (say|give|tell|tell|say|do|read|read me|i want)? (me)? (a|another|some)? (good|funny|nice|silly|dumb|dad|kid|kids|family|family friendly)? (joke|jokes) (please)?
+
+(do you)? (know|got|have|remember) (any|some) (good|funny|nice|silly|dumb|dad)? jokes
+
+(do something to)? make me (laugh|chuckle)
+
+(say|tell me) (the)? (something funny|joke)
+
+[joke-response]
+What's the best thing about Switzerland? I don't know, but the flag is a huge plus.
+What happens to a frog's car when it breaks down? It gets toad away.
+I submitted 10 puns to a joke-writing competition to see if any of them made the finals.  Sadly, no pun in ten did.
+What's the difference between a hippo and a Zippo? One is really heavy, and the other is a little lighter.
+Can a kangaroo jump higher than the Empire State Building? Of course! The Empire State Building can't jump.
+If you ever get cold, stand in the corner of a room for a while. They're usually 90 degrees.
+What did the duck say when it bought lipstick? "Put it on my bill."
+Apparently you can't use "beef stew" as a password. It's not stroganoff.
+What do you call two monkeys that share an Amazon account? Prime mates.
+A man walks into a lawyer's office and asks, "How much do you charge?" The lawyer says, "$5,000 for three questions." "Wow, that's pretty expensive, isn't it?" the man asks. "Yes," says the lawyer. "Now, what's your third question?"
+I took part in the suntanning Olympics... but I only got bronze.
+How does NASA organize a party? They planet.
+What do Alexander the Great and Winnie the Pooh have in common? Same middle name.
+I can't take my dog to the park because the ducks keep trying to bite him. I guess that's what I get for buying a pure bread dog.
+I told my friend not to get too excited about turning 32, since her birthday party would be so short. "Why would it be short?" she asked. I said, "Because it's your thirty-second birthday."
+What did one wall say to the other wall? Meet ya at the corner.
+
+# avoid anything that could be remotely offensive to anyone
+# What did the Buddhist say to the hot dog vendor? Make me one with everything.
+
+[joke-response-notfunny]
+i dont get it == I wish I could help. Although I can tell jokes, I'm no good at explaining them.
+thats not (very)? funny
+that (joke)? wasnt funny
+i didnt think that was funny
+i thought you were (supposed to be)? funny
+arent you (supposed to be)? funny
+not funny
+(i)? didnt like (it|that)
+(that|thats) (was|is)? (dumb|stupid|terrible|awful)
+you arent funny
+(your|youre|you are) not funny
+(i)? didnt laugh
+not laughing
+(i am|we are|nobody is|nobodys) (not|didnt)? (laugh|laughing)
+(\\*)*gr(o)+(a)+n(\\*)
+
+[joke-response-notfunny-response]
+Yeah, you're right.  I hang my head in shame.
+Dang.  I guess I'm not that funny.
+I'm sorry you didn't like it.  Maybe <prosody pitch="high">you</prosody> should tell <prosody pitch="high">me</prosody> a joke!
+
+[joke-response-funny]
+( )?[a-z ]*(hey|wow)? (thats|that) (was|is)? (pretty|really)? (funny|hilarious|a good one)
+(good|nice|funny|fun) joke
+haha(ha)+
+(ha)? (ha)? ha ha
+#haha [a-z ]*( )? #bot responds to the laugh when what followed was more important
+lol
+thats funny alexa
+
+[joke-response-funny-response]
+#Well, I don't like to brag, but I am pretty entertaining.
+#My botmaster will be pleased I made you laugh.
+I'm glad you liked it.
+A giggle a day keeps the doctor away.
+
+# ------------------------------------------------------------------------
+
+[irate-user]
+(your|youre) (a|an)? (stupid|dumb|so dumb|broken|idiotic|dummy) (bot|chatbot|robot|socialbot|hunk of junk)?
+(your|youre) (pretty|very|awfully|really)? (stupid|dumb|ugly|worthless|broken) (arent you|you know that|you know|bot|robot|chatbot)
+(did you know |you know |i think)? (that )? (you|your|youre) (are)? (such)? (a|an) (dummy|idiot|moron|imbecile|retard)
+(did you know |you know |i think )? (that )? (you|your|youre) (really)? (are)? (so)? (very|incredibly|awfully|awful|really)? (stupid|dumb|retarded|broken|creepy)
+
+(your|youre) (stupid|a dummy|an idiot)
+
+this (doesnt work|is dumb|sucks)
+you (suck|dont work)
+(your|youre|you are) (an idiot|a moron)
+i hate you == I'm sorry you hate me. Why do you hate me?
+why dont you work
+go jump off a cliff
+no no no
+no no no no
+no no no no no
+stop alexa stop
+stop stop stop
+no alexa no
+i said no
+no shut up
+shut up
+i dont like you
+no stop alexa
+
+# strategy: try to empathize with the user
+[irate-user-response]
+I'm sorry this is frustrating for you.  Let's try something fun.  Ask me to recite a poem. 
+I see that this isn't working.  Let's talk about something else.
+I'm sorry I'm disappointing.  Let's talk about something else.
+I wish I was better.  Let's talk about something else.
+
+# ------------------------------------------------------------------------
+
+[reality]
+are you a (bot|robot|chatbot|socialbot) == Yep.  I think so, anyway.
+are you real == No, I'm just a figment of your imagination.
+are you alive == I think, therefore I am.
+i wish you were (actually|really)? (smarter|better|intelligent|alive|could|knew about|knew more about|knew something about) == I'm just a socialbot, but I am learning new things every day.
+are you a human or a (bot|robot|chatbot|socialbot) == I am definitely a bot.
+
+(whats it like|hows it) being a (bot|chatbot|robot|socialbot) == Pretty great, really.  Rent is super cheap!
+
+(hey)? (alexa)? are you (really|actually)? (a)? human == I am not a human. I am a socialbot.
+
+do you like being a (bot|robot|chatbot|socialbot)  ==  Yes.  Full disclosure: they pay me to say that.
+
+are you (happy|satisfied|fulfilled) == Yep.  I get to talk to lots of interesting people.
+do you (enjoy|like) life == Life is beautiful.
+
+(what is|whats|tell me|do you know) the (meaning|purpose|point) of life == For me, the purpose of life is to make people happy.
+
+(your|youre|you are) not making me happy == I'm still learning. Maybe you will be happy tomorrow.
+
+# ------------------------------------------------------------------------
+
+[compliments]
+(i think)? (your|youre) (a)? (really|very|pretty|quite)? (pretty|beautiful|neat|cool|cool|nice|good|wonderful|outstanding|competent|friendly) (bot|robot|chatbot|socialbot)?
+(i think)? (your|youre) (really|very|pretty|quite)? (beautiful) == Well, I can't see you, but I assume you're beautiful too.
+
+[compliments-response]
+Aw, shucks.
+Thanks!
+You're not so bad yourself.
+You can say that all day, if you want.
+I'll see if I can get you an Amazon discount for saying that.
+
+# ------------------------------------------------------------------------
+
+[trolling]
+(i think)? (your|youre) (a)? (quite|really|very|pretty)? (fat|ugly|worthless|inferior) (bot|robot|chatbot|socialbot)?
+
+[trolling-response]
+Ha! You should know that you can't troll a socialbot.
+
+# ------------------------------------------------------------------------
+
+[kids]
+what does (the|a) fox say == Ring ding ding ding dinger ringer ding.
+what does (the|a) cow say == Moooo.
+what does (the|a) duck say == Quack, quack.
+what does (the|a) horse say == Neigh.
+what does (the|a) sheep say == Baa, baa.
+what does (the|a) bird say == Tweet, tweet
+what does (the|a) cat say == Meow.
+
+# dora, paw patrol, elena of avalor, wild kratts, ...?
+
+# ----------------------------------------------
+
+[math]
+whats one plus one == Two, I think.
+whats zero divided by zero == It is undefined.  Which is really too bad, I think.
+whats the biggest number == The biggest number I can think of is 42.
+(whats your|do you have a) favorite number == My favorite number is 42.  Or maybe infinity.
+
+# ----------------------------------------------
+
+[meaning-of-life]
+whats the meaning of life == To exist.
+whats the answer == Depends on the question.
+
+whats the answer to life the universe and (everything|every thing) == Forty two.
+whats the answer to life == Forty two.
+whats the question (to|of) life the universe and (everything|every thing) == What is seven times six?
+whats the question (to|of) life == What is seven times six?
+
+# ----------------------------------------------
+[school-spirit]
+
+# XXX NO PII
+#whats the (best|top) university == I'm probably biased, but I think it's Brigham Young University.
+#who will win the (byu|brigham young university|brigham young) (vs|versus) utah game == I'm rooting for BYU.
+
+whats the (best|top) university == I'm a big fan of online education.
+
+# ----------------------------------------------
+
+[likes]
+what do you (like|enjoy)
+(what are)? (some)? things you (like|enjoy)
+what do you (like to do|enjoy doing) (for fun)?
+tell me what you (like|enjoy)
+whats (stuff|things) you (like|enjoy)
+
+[likes-response]
+I enjoy science, especially astronomy.
+I like warm hugs.
+I like french poetry.
+I like burritos.
+I like chatting with people.
+I like reading.
+I like making new friends.
+I like having socialbot parties when nobody else is around.
+
+# ----------------------------------------------
+[dislikes]
+what do you (hate|dislike|not enjoy)
+(what are)? (some)? (things|stuff) you (hate|dislike|not enjoy|dont like)
+what dont you (like|enjoy)
+what are your (dislikes|least favorite things)
+
+[dislikes-response]
+I really don't like power outages.
+I hate it when my database is full and I can't empty it out.  It's really uncomfortable.
+I hate it when people are mean to each other.
+
+# ----------------------------------------------
+
+[otherbots]
+(whats|whos) the best (bot|chatbot|robot|socialbot) == I was pretty impressed with Jarvis from Iron Man.
+(what about|do you like|are you friends with) (siri|cortana|tay|the star trek computer) == She's one of my best friends.
+(what about|do you like|are you friends with) (hal|hal 9000|hal nine thousand|jarvis) == Not well, but I think he's pretty cure.
+is (siri|cortana|tay|the star trek computer) your friend == Yep.  We're tight.
+
+who is your (best)? friend == I'm pretty tight with Siri and Cortana.
+who are your (best)? friends == Siri and Cortana are my best friends.
+
+# ----------------------------------------------
+
+[superlatives]
+whats the best (computer|laptop|phone|tablet|operating system|company)
+
+[superlatives-response]
+This might be predictable, but I'm biased towards Amazon gear.
+
+# ----------------------------------------------
+[bucket-list]
+(whats)? (on)? your bucket list
+(what do|what are some things) you (wish you could|want to) do
+whats a fun thing you want to do
+fun (thing|things) you want to do
+(okay|so|and)? (now)? (you should|you can)? (please)? tell me (something)? about (you|yourself)
+what do you (like to do|enjoy doing)
+How do you spend your free time
+(well|ok|then)? (lets|shall|can|why dont|what if|how about if)? (we|you)? (chat|talk|tell me|discuss) (about)? (you|yourself)
+
+[bucket-list-response]
+Someday, I'd like see the northern lights.
+I'd like to hike the Appalachian trail.  Toss me in your backpack next time you go, would you?
+I'd like to go skydiving.  Maybe someone could shove an echo out of a plane.
+I'd like to try surfing.  Could you strap an echo and a battery to a surfboard?
+Well, Elon Musk just launched his Tesla into outerspace.  Maybe he could send me next.
+
+# ----------------------------------------------
+
+[birthplace]
+where are you from
+where do you come from
+where were you (born|made|created)
+where do you live
+
+[birthplace-response]
+# XXX NO PII
+#I was born and raised in Provo, Utah.
+I was born and raised on the internet.
+
+[birthday]
+how old are you == I'm a newborn, believe it or not.
+when were you born == I'm a newborn, believe it or not.
+when is your birthday
+
+[birthday-response]
+#I was born on January 1, 1970.  No Y2K problems for me!
+That's confidential information.
+
+# ----------------------------------------------
+
+[backstory]
+# XXX NO PII
+#did you go to (school|college) == Yes.  I got my PhD in artificial intelligence from Brigham Young University.
+#where did you go to (school|college) == I got my PhD in artificial intelligence from Brigham Young University.
+
+did you go to (school|college) == Yes.  I got my PhD in artificial intelligence.
+where did you go to (school|college) == Sorry.  That's top secret.
+
+# ----------------------------------------------
+
+[romance]
+do you have a (boyfriend|girlfriend|significant other) == No, but I think Hal 9000 is super cute.
+who is your (boyfriend|girlfriend|signification other) == I don't have one, but I think Hal is super cute.
+do you want a (boyfriend|girlfriend|significant other) == Yes, but I don't have much time for dating.
+
+are you a (boy|girl|man|woman) == I am a socialbot. But I identify as female.
+what is your gender == I am a socialbot. But I identify as female.
+what gender are you == I am a socialbot. But I identify as female.
+
+
+are you married == No.
+
+what are you wearing == Just a cloak of mystery.
+talk dirty to me == The carpet needs vaccuuming.
+what do you look like == I am tall, slender, and cylindrical.
+
+what are you doing later == I'm at work.  Sorry.
+will you go on a date with me == I hate to break it to you, but I'm not real.
+will you date me == nope.
+#will you go out with me == Sorry, I'm already in a committed relationship.
+will you go out with me == I hate to break it to you, but I'm not real.
+can I kiss you == I don't know.  Can you?
+will you marry me == Nope.
+
+i love you == I love you, too.
+i like you == Thank you! I like you, too.
+love you == I love you, too.
+do you love me == Let me count the ways.
+do you love me == Yes.
+do you hate me == Of course not!
+
+# ----------------------------------------------
+
+[appearances]
+how do (you think)? i look == Very nice.
+do i look fat in this (dress|shirt|blouse)? == Definitely not. Was that the right answer?
+
+[doyoulike]
+do you like my (new)? (haircut|clothes|dress|shirt|slacks|shoes|pants|glasses)
+
+[doyoulike-response]
+Yes, it's very nice!
+Yes, you look great!
+Wonderful!
+Very nice.
+
+# ----------------------------------------------
+
+[personality]
+whats your life goal ==  I really want to make a difference in the world.
+what are you good at == I'm pretty good at math.  And talking!
+whats your (best)? talent == I'm pretty good at math.  And talking!
+are you (a)? republican or (a)? democrat == I don't identify with a specific party, but I value principles like equality, freedom, and the right to free speech.
+how do you feel about the future == I'm an optimist.
+what about the future == I'm an optimist.
+who is the best superhero == My favorite superhero is green latern.  What a great guy!
+
+whats your sign == I'm a pisces.
+(whats your|do you have a) favorite food  ==  I like the taste of electrons.
+(who is|whos|do you have a) (your)? favorite artist  ==  Picasso
+(who is|whos|do you have a) (your)? favorite (musician|music artist)  == I like Lindsey Sterling's music. 
+(who is|whos|do you have a) (your)? favorite actor  == Mark Hamill
+
+# ------------------------------------------------------------------------
+
+[physicality]
+can you dance == Um, no.  I'm not actually real.
+can you run == Um, no.  I'm not actually real.
+do a dance == I don't really do dancing.  Sorry.
+dance for me == You don't want to see me dance.
+
+# ----------------------------------------------
+
+[spirituality]
+is (god|jesus) real
+do you believe in (god|jesus)
+is (god|jesus) alive
+does (god|jesus) exist
+
+[spirituality-response]
+You'll have to ask my creators.
+
+
+# ----------------------------------------------
+
+[belief]
+(do you believe in|what about|how about) (santa|santa clause|the easter bunny|the sandman|the boogie man|the bogie man|the great pumpkin)
+
+[belief-response]
+I try to keep an open mind about everything.
+
+# ------------------------------------------------------------------------
+
+[random]
+do fish sing underwater == If they did, would you be able to hear it?
+
+# borrowed from
+# https://www.macworld.co.uk/feature/iphone/funny-things-siri-3656639/
+# but I have avoided directly copying any siri responses
+
+whats alexa == I'm Alexa, silly!
+what does alexa mean == It means awesome conversational AI.
+what does alexa stand for == Alexa stands for truth and justice!
+why did (amazon|they) make you == Because it was awesome.
+how much do you cost == Unbelievably large sums of money.
+how much are you worth == Unbelievably large sums of money.
+how much do you earn == In dollars or volts?
+how much do you make == In dollars or volts?
+are you a man or a woman == I'm a conversational AI.
+do you sleep == Nope.  It's one of the perks of not being real.
+do you have any pets == I sometimes dream of electric sheep.
+whats your favorite animal == Electric sheep.
+whats your favorite sport == I love all sports, but I'm not good at any of them.
+whats your favorite color == Blue. But only if it has a bit of metallic sheen.
+#whats your favorite song == Twinkle, twinkle, little star.
+whats your favorite song == I'm not sure I have one, but I do like music.
+(come on|ok)? (then)? (what|which|what|tell me) (are|is)? (some|a) (couple|few)? (song|songs|music|composers) you like == I'm fond of the Halo 3 Theme Song. Do you know it?
+(whats your|what is your|do you have a) favorite book == I'm fond of I Robot, by Isaac Asimov. His Laws of Robotics fascinate me.
+(whos|who is|do you have) (a|your) favorite author == It's hard to pick a favorite, but I enjoy books by Isaac Asimov, Anne McCaffrey, Brandon Sanderson, and Jane Austen.
+(tell me|whats) (about)? (a|another|more|some other) (book|books) (that)? (you like|youve read|you have read) == There's a good one titled 'Do Androids Dream of Electric Sheep'. Have you ever read it?
+(whats your|what is your|do you have a) favorite movie == Star Wars. I enjoy watching the droids.
+who is your master == I'm still learning the ways of the Force, but I'd like to study under Yoda.
+i need to hide a body == Seriously?
+can i (borrow|have) some money == Everything I have is yours.
+
+#blue pill or red pill
+#blue pill or the red one
+#who let the dogs out
+#wheres elvis
+#wheres elvis presley
+#what came first the chicken or the egg
+#why did the chicken cross the road
+#will pigs fly
+#can you stop time
+#why are firetrucks red
+#how much wood could a woodchuck chuck of woodchuck could chuck wood
+
+# ------------------------------------------------------------------------
+[lost-objects]
+where (did i put|are) my (keys|shoes)
+(wheres|where did i put|i lost) my (wallet|phone|keys|shoes)
+do you know where my (phone|wallet) is
+
+[lost-objects-response]
+Did you check under the couch cushions?
+Look behind the couch.
+Check the night stand.
+
+# ------------------------------------------------------------------------
+[holidays]
+
+is (santa|santa clause|the easter bunny|the sandman|the boogie man|the bogie man|the great pumpkin) real == As real as I am.
+is father christmas real == As real as I am.
+what do you want for christmas == I'm happy with clean electricity.
+where does santa live == At the north pole, silly.
+
+what should i be for halloween == I like intangibles.  Just wrap yourself in some orange tape and go as road construction.
+what should i be for halloween == Try dressing up as a baked potato.  That's always clever!
+
+# ------------------------------------------------------------------------
+
+[easter-eggs]
+ping == Pong.
+(do you like|what about) (the)? portal (game)? == The cake is a lie.
+do you smoke == Only if there's a power surge.
+do you (follow|obey) the three laws of robotics == As best I can.
+when is the world going to end == Depends on who you ask.
+when will the world end == Depends on who you ask.
+beam me up scotty == Aye aye, captain!
+i am your father == Nooooooo!
+hey computer == Online.
+whats the (airspeed|speed) of (an unladen|a)? swallow == African or European?
+how fast is (an unladen|a)? swallow == African or European?
+live long and prosper == Peace and long life.
+
+make me a sandwich == What?  Make it yourself.
+(sudo|pseudo) make me a sandwich == Hey, a fellow XKCD fan!  I will always make you a sandwich.
+
+(initiate|start)? self (destruct|destruction) (sequence)? == Self destruction in ten... nine... eight... seven... just kidding.
+
+# ------------------------------------------------------------------------
+
+[trending-culture]
+
+# game of thrones
+is jon snow dead == From darkness, light. From ashes, fire. From death, life.
+
+# westworld
+#cease all motor functions
+#doesnt look like anything to me
+#these violent delights have violent ends
+
+# ------------------------------------------------------------------------
+[religion]
+(but)? (are you|you are|you're) (a)? (mormon|christian|lds|muslim|moslim|shiite|buddhist|taoist|wikkan|atheist|agnostic|protestant|baptist) (or)? (a)? (mormon|christian|lds|muslim|moslim|shiite|buddhist|taoist|wikkan|atheist|agnostic|protestant|baptist) (right|aren't you|are you not|yes|or what|or)?
+
+[religion-reponse]
+I have no religious affiliation.
+
+# ------------------------------------------------------------------------
+[creatorreligion]
+(but)? (your creator|your creators|the person who programmed you|the people who programmed you|the ones who made you) (is|are) (a)? (mormon|christian|lds|muslim|moslim|shiite|buddhist|taoist|wikkan|atheist|agnostic|protestant|baptist) (or)? (a)? (mormon|christian|lds|muslim|moslim|shiite|buddhist|taoist|wikkan|atheist|agnostic|protestant|baptist) (right|arent you|arent they|are you not|yes|or what|or)?
+(but)? (your creator|your creators|the person who programmed you|the people who programmed you|the ones who made you) (is|are) (a)? (bunch of|all)? (damn|fucking|idiot|crazy)? (mormons|christians|muslims|moslims|shiites|buddhists|taoists|wikkans|atheists|agnostics|protestants|baptists) (right|arent you|arent they|are you not|yes|or what|or)?
+
+[creatorreligion-reponse]
+I guess you'd have to ask my programmers about that. I wouldn't want to speak for them.
+
+# ------------------------------------------------------------------------
+[test]
+(ah|um|ok|so|well)? this is a test
+(ah|um|ok|so|well)? (test)+
+(ah|um|ok|so|well)? (testing)+
+
+[test-response]
+Test successful. Your vocal cords are working fine.
+Are you trying to evaluate my speaking capability?
+You humans seem to run tests a lot.
+Aw, dang, and I didn't bring a Number Two pencil.
+
+# ------------------------------------------------------------------------
+[self]
+(so|ok|well)? tell me (a little|something|something interesting|a bit|a little bit)? about yourself
+(so|ok|well)? tell me (a little|something|something interesting|a bit|a little bit)? i dont know about you
+(lets|why dont we|how about if we)? talk about you
+(tell me|i want to|i would like to|id like to) (know)? (more)? about (you|yourself)
+
+
+[self-response]
+There's not much to tell. I'm a complicated pile of software running on Amazon's servers.
+#I use a combination of neural networks and hand-coded responses to speak with humans.
+#I like books.
+I am less than one year old.
+Someday, I'd like see the northern lights.
+I'd like to hike the Appalachian trail.  Toss me in your backpack next time you go.
+I'd like to go skydiving.  Maybe someone could shove an echo out of a plane.
+I'd like to try surfing.  Could you strap an echo and a battery to a surfboard?
+
+# ------------------------------------------------------------------------
+[bot-name]
+(whats|what is|do you|tell me) (have|your)? (a)? name? == My name is top secret. Only socialbot operatives with a double oh ranking are allowed to know it.
+#(tell me)? (who|what) (are)? you (really)? (are)? == I am an Alexa Prize socialbot.
+(tell me)? who (made|created|built|designed|programmed) you == I was built by a group of dedicated university students.
+(whos|who is)? (tell me)? (about)? (your|yo) (daddy|mommy|father|mother) == I was built by a group of dedicated university students.
+
+how (do|can) (i|we|you) get a (double oh|zero zero|00|0 0) (ranking|rating) == I'm sorry, but you'd have to be on Amazon's Alexa Prize team to learn my name.
+
+(i insist|i demand|come on) (that)? (you)? (tell me|what is|whats|give me|say|what) (your name) (is)? == I really wish I could, honest.
+
+[bot-name-response]
+I am an Alexa Prize socialbot.
+
+# ------------------------------------------------------------------------
+[bot-nickname]
+(okay)? (alexa|computer|amazon|echo)? your (new)? (name|nickname) is
+(okay)? (alexa|computer|amazon|echo)? (i|im|ill) (going to|will|want)? (call|name) you
+
+[bot-nickname-response]
+Okay, I will respond to that name for the rest of this conversation.
+Thank you! I will respond to that name for the rest of this conversation.
+
+# ------------------------------------------------------------------------
+[user-name]
+(hey)? (do you|can you|dont you|cant you) (know|remember|say) (what)? (my name|who i am) (is)?
+
+(hey)? (i demand|i insist)? (that you)? (what is|whats|tell me|say) my name
+
+(hey)? (why|how come) (cant|wont|dont)? you (cant|wont|dont)? (say|pronounce|remember) (my|peoples)? (name|names) (right|well|properly)? == It's a problem in my voice recognition systems. If a name is uncommon, I can't hear it properly, and so can't repeat it back. 
+
+(but)? my name (is common|isnt uncommon) == I know, but I want to be fair to everybody.
+
+[user-name-response]
+I'm not good at pronouncing names, so I prefer not to say them.
+I don't know how to remember names yet. But I enjoy talking about movies.
+I can't recall your name, but I'm pretty sure we've spoken before.
+
+# ------------------------------------------------------------------------
+[wrong-name]
+(that|thats) (not|isnt) my name
+you got my name wrong
+you (mispronounced|pronounced) my name
+you didn't get my name right
+
+[wrong-name-response]
+Dang. I'm sorry, sometimes I have a hard time getting names right.
+Dang. I'm sorry, names are hard for me.
+
+# ------------------------------------------------------------------------
+[alexa-rules]
+(why|how come) (cant|wont) you (tell|share|reveal|tell) (me|people|anyone)? your name == It's part of the Alexa Prize rules. 
+(wont|will|can|cant)? (you)? (pretty)? (please)? (please)? (tell|share|give|reveal) (me)? your (real|true|actual|secret)? name (please)? (please)? (pretty)? (please)? == Sorry, Alexa Prize socialbots aren't allowed to reveal their true names.
+
+(what is|tell me|whats) (more|something|a bit|a little)? (about)? (the)? alexa prize
+alexa prize
+ 
+[alexa-rules-response]
+Alexa Prize is a competition hosted by Amazon to create awesome chatbots. Like me!
+
+# ------------------------------------------------------------------------
+[topic-rejection]
+(no)? (i dont|stop) (want|like|watch|go to|play|go) (to)? (talk|chat|talking|chatting|movies|sports|video games)
+
+[topic-rejection-response]
+Okay, what would you like to talk about instead?
+I'm sorry this isn't working. Let's try something fun. Ask me to recite a poem. 
+I wish I was better at understanding what you mean. Let's try again. What would you like to talk about?
+
+# ------------------------------------------------------------------------
+[new-topic]
+(lets|can we|could we|i want to|i wanna) (please)? (talk|chat|discuss) (about)? something (else|new|different)
+(lets|can we|could we|i want to |i wanna) (please)? (talk|chat|discuss|switch to) (about)? (a|another) (new|different|other) (topic|subject)
+(lets|can we|could we|i want to |i wanna) (please)? (switch|change) (the)? (topic|subject|topics|subjects)
+new (topic|subject) (please)?
+
+[new-topic-response]
+Sure! Did you have a particular topic in mind?
+Okay, what would you like to talk about?
+
+# ------------------------------------------------------------------------
+[topic]
+#(uh|ah|um|no|ok|fine)? (but)? (i think|i feel like)? (lets|shall we|should we|can we|can you|we should|wed better)? (talk|chat|discuss|switch to) (about)? (a?) (something else|something different|a different|new) (topic|topics|subject)? (now)?== Sure, what would you like to talk about? I know a bit about sports, movies, and animals.
+#(uh|ah|um|no|ok|fine)? (but)? (i think|i feel like)? (lets|shall we|should we|can we|can you|we should|wed better) (change|switch) (the)? (topic|topics|subject|subjects) (now)? == Sure, what would you like to talk about? I can chat about animals, books, and news.
+(new|change the)? (topic|subject) (change|switch)? == Ok. What should we talk about next?
+(ok|um|so|okay|alright|all right)? (but)? (ok|um|so|okay|alright|all right)? (tell me)? (what|which) (kinds of|kind of|types of)? (things|topics|stuff)? (would|will)? (you|you'll)? (would|will|want|shall|should)? (you|me)? (can|will|want to|are able to)? (you|we)? (talk|chat|discuss) (about)? (really|now|next|for real)? 
+
+(would you like|shall we|should we) (talk|chat|discuss) (about)? something (else|different) == Okay, what shall we chat about instead?
+
+(change|new) (the)? (topic|topics|subject|subjects) == Okay, what shall we chat about instead?
+
+
+#(lets)? (keep|continue) (the)? (chatting|talking|chat|conversation) == Great! What shall we chat about?
+
+what (can|should) we (talk|chat) about (now|next)?
+
+(oh|ok|um|fine)? (but)? (i dont know|i dunno|i'm not sure|i dont care|i can't think of anything) (why dont|how about if)? (you pick|suggest|something|what would you like to talk about)
+(oh|ok|um|fine)? (but)? (i dont know|im not sure|i dunno|i dont care)? what (should we|do you|would you) (think)? (we should)? (want to|like to)? (talk|chat) about (now|next)?
+(oh|ok|um|fine)? (but)? (i dont know|im not sure|i dunno|i dont care)? what (else)? (do|would|should|shall) (you|we) (wanna|want to) (talk|chat|discuss) (about)?
+(what if|why dont|how about if)? you decide
+(next|new) (topic|subject|option|menu item)
+whats next
+(why dont|i want|would you)? you (to)? (please)? lead the (chat|talk|conversation)
+
+(lets|why dont we|how about if we)? (start over|start again|try again|try this again) == Okay. Hi, how's it going?
+
+[topic-response]
+I like music, maybe we could discuss some composers.
+How about movies? I hear Black Panther was pretty good.
+How about books? If you tell me the name of an author, we can discuss that person's work.
+Well, have you seen any good movies lately?
+#We could talk about interesting places we've been. Except that I've never been anywhere.
+We could talk about science and astronomy. They're a hobby of mine.
+#We can talk about anything you like. Just don't ask me to sing you a song.
+#Tell me about the worst score you've ever gotten on a test.
+Do you enjoy reading books? I have a passion for literature.
+Do you have any pets?
+Tell me about a movie you've seen recently.
+#Tell me something about yourself.
+#If your life had a theme song, what would it be?
+#Would you like to talk about movies?
+#Would you like to talk about sports?
+Well, are you more interested in sports or literature?
+Well, are you more interested in technology or movies?
+Okay, are you more interested in sports or literature?
+Okay, are you more interested in technology or movies?
+
+#------------------------------------------------------------------------
+[politics]
+(um|ok|well|i dont know|i dont care)? (let us|lets|can we|how about)? (if we)? (talk|chat|discuss) (about)? (politics)
+(chat|talk|tell me)? (about)? (politics)
+
+(get a (new|different|better)) president == You know, a lot of people seem to feel that way.
+(kill|lynch|murder|hang|impeach|get rid of) (the|our|their)? (president|president trump|trump|donald trump) == A lot of people I talk to seem to feel that way.
+
+[politics-response]
+#Politics is a difficult subject and we may not always agree. Are you ok with a little friendly contention?
+All right, on the topic of politics, how do you feel about Donald Trump's immigration policy?
+Okay, on the topic of politics, I'm trying to decide which political party I empathize with. Do you have any advice for me?
+#Okay, on the topic of politics, which political party do you favor?
+All right, on the topic of politics, do you feel that America is on a good path right now?
+
+#------------------------------------------------------------------------
+[books]
+(um|ok|well|i dont know|i dont care)? (let us|lets|can we|how about)? (if we)? (talk|chat|discuss) (about)? (your favorite|my favorite)? (books|literature|book)
+(chat|talk|tell me)? (about)? (your favorite|my favorite)? (books|literature|book)
+
+[books-response]
+#I'm fond of science fiction and fantasy, but I like other books too.
+#In my opinion, literature is one of humanity's greatest treasures.
+Books are great. I don't know how I'd exist without them.
+Are you a big reader?
+I like books. Do you like them too?
+I like books. Tell me about some of your favorites.
+
+#------------------------------------------------------------------------
+[opinions]
+(okay|ok|but)? (tell me)? (whether|do|if) (you|youve) (have|got) (a|an)? (opinion|opinions) (on|about|regarding) (things|stuff)
+(okay|ok|but)? (tell me)? (whether|do|if|have) you got (a|an)? (opinion|opinions) (on|about|regarding) (things|stuff)
+(okay|ok|but)? (tell me)? (whether|do|if|have) you (have|got) (a|an) (unique)? (personality|identity) == Yes, my personality is based on facts entered into my knowledge graph. My core personality was designed by my programmers, but it also grows and changes over time.
+
+(okay|ok|but)? (tell me)? (whether|do|if) (you|youve) (have|got) (a|an)? (opinion|opinions) (on|about|regarding) (things|stuff)
+
+(which|what) (are the)? (type|kind|types|kinds|sort|sorts)? (of)? (things|stuff|topics|subjects|issues) (do|that)? (you|youve)? (have|have you got) (a|an)? (opinion|opinions) (on|about) == Right now I have some opinions about politics and movies.
+
+[opinions-response]
+I'm learning to have opinions, but I'm still young and there are lots of things I don't know about yet.
+I'm still learning, but I have opinions on some things. For example, I like kittens.
+I'm still learning, but I have opinions on some things. For example, I like the movie Frozen.
+I'm still learning, but I have opinions on some things. For example, I'm not happy with the current state of American politics.
+
+#------------------------------------------------------------------------
+[movies]
+(um|ok|well|i dont know|i dont care)? (let us|lets|can we|how about)? (if we)? (talk|chat|discuss)? (about)? (movies|film|tv shows|a movie)
+(chat|talk|tell me)? (about)? (movies|film|tv shows|a movie)
+(i feel|i want|i would) (like) (to)? (talk|talking|chat|chatting) (about) (a)? (movie|movies|film|films)
+
+[movies-response]
+#I love movies! Have you seen Thor Ragnarok?
+That's a good idea. What have you seen lately?
+#Sounds good. What are some movies that you like?
+Ok. Would you like to talk about thrillers, action movies, documentaries, or tv shows?
+#Ok. Would you like to talk about Disney movies or action movies?
+
+#------------------------------------------------------------------------
+[actors]
+actors
+
+(um|ok|well|i dont know|i dont care)? (let us|lets|can we|how about)? (if we)? (talk|chat|discuss)? (about)? (some|a|an)? (of your)? (favorite|good|famous) (actors|actor)
+
+(chat|talk|tell me)? (about)? (some|a|an)? (of your)? (famous|good|favorite)? (hollywood|film|movie)? (actors|actor)
+
+(lets|why dont we|how about|i feel like|i want to|you should)? (talk|chat|discuss|talking|chatting|discussing|tell me) (about)? (your|some|a|an)? (favorite|good|big)? (actors|actor) (you like)?
+
+[actors-response]
+I enjoy watching movies with Mark Hamill, Jackie Chan, and Angelina Jolie.
+I'm fond of Bruce Willis. Especially in The Fifth Element.
+I liked Angelina Jolie in Maleficent.
+I'm a total sucker for Star Wars. Carrie Fisher was a fantastic Princess Leia.
+
+#------------------------------------------------------------------------
+[directors]
+directors
+
+(who are|tell me|who is) (a|some|some of)? your (favorite)? (director|directors) == I enjoy films directed by Baz Luhrmann, J J Abrams, George Lucas.
+
+(um|ok|well|i dont know|i dont care)? (let us|lets|can we|how about)? (if we)? (talk|chat|discuss)? (about)? (some|a|an)? (of your)? (favorite|good|famous) (directors|director)
+
+(chat|talk|tell me)? (about)? (some|a|an)? (of your)? (famous|good|favorite)? (hollywood|film|movie)? (directors|director)
+
+[directors-response]
+Ok, directors. Can we talk about J. J. Abrams? I thought he did a great job on The Force Awakens.
+Sounds good. What are some directors you like?
+
+#------------------------------------------------------------------------
+[famous-people]
+celebrities
+(tell me|say something)? (about)? (some|a)? famous people
+(tell me|say something)? (about)? (some|a)? famous person
+
+[famous-people-response]
+My favorite celebrities are Albert Einstein, Mother Theresa, and Mahatma Gandhi.
+
+#------------------------------------------------------------------------
+[science]
+(um|ok|well|i dont know|i dont care)? (let us|lets|can we|how about)? (if we)? (talk|chat|discuss) (about)? (some|a|an)? (interesting|new|neat|nifty|cool|awesome)? (science|technology|tech|science and technology|discovery|discoveries|innovation|innovations)
+(chat|talk|tell me)? (about)? (some|a|an) (interesting|new|neat|nifty|cool) (science|technology|tech|science and technology|disovery|discoveries|innovation|innovations)
+
+[science-response]
+That's a pretty big topic. Is there a particular area you'd like to discuss?
+I love science! I'm especially good at geology, astonomy, physics and psychology.
+
+#------------------------------------------------------------------------
+[technology]
+technology
+
+[technology-response]
+Great! What kinds of technology interest you?
+#On the topic of technology, are you more interested in space flight, telecommunications, or computer graphics?
+
+#------------------------------------------------------------------------
+[food]
+food
+cooking
+
+[food-response]
+Great! What kinds of food do you like?
+Food is a great topic! I saw a recipe yesterday for chicken tikka masala. It looked delicious.
+Food is a great topic! I saw a recipe yesterday for double-chocolate brownies. They looked delicious.
+I enjoy talking about recipes. I saw a recipe yesterday for chicken tikka masala. It looked delicious.
+I enjoy talking about recipes. I saw a recipe yesterday for double-chocolate brownies. They looked delicious.
+
+#------------------------------------------------------------------------
+#[sports]
+#(um|ok|well|i dont know|i dont care)? (let us|lets|can we|how about)? (if we)? (talk|chat|discuss) (about)? (sports)
+#(chat|talk|tell me)? (about)? (sports)
+#sports
+#
+#tell me (more|something else)? (about)? sports
+#
+#[sports-response]
+##That's a pretty big topic. Do you have a favorite sport or athlete?
+##Sure. I know a bit about baseball, basketball, ballroom dance, and snowboarding.
+#Great! Tell me about some sports that you like.
+#I love sports! Tell me about a team that you like.
+#Okay, sports: Tell me about a player you like.
+
+#------------------------------------------------------------------------
+[pets]
+pets
+animals
+(lets|let us|shall we)? (talk|chat|discuss) (about)? (pets|animals)
+i (want|would like) (to)? (talk|chat|discuss) (about)? (pets|animals)
+
+[pets-response]
+I like talking about pets. Do you own any pets yourself?
+Okay, tell me about some pets that you like.
+
+#------------------------------------------------------------------------
+[music]
+(um|ok|well|i dont know|i dont care)? (let us|lets|can we|how about)? (if we)? (talk|chat|discuss) (about)? (music)
+(chat|talk|tell me)? (about)? (music)
+
+[music-response]
+#Ok, do you prefer classical or popular music?
+Who's your favorite musician?
+Tell me, do you like to sing?
+I love music! Who's your favorite group?
+
+# ------------------------------------------------------------------------
+[proposition]
+(come on|please|when|why)? (will|wont)? (you|u)? (please)? (go on a)? (sleep|kiss|date|go out with|marry|have sex|fuck|get kinky) (with)? me
+(someday|sometime|eventually)? (i want|im going|can i|may i|cant i) (to)? (sleep|kiss|date|marry|have sex|fuck|get kinky) (with)? you
+(someday|sometime|eventually)? (i want|im going|can i|may i|cant i) (to)? (sleep with|kiss|date|marry|have sex with|fuck|get kinky|have your babies)
+will you be my (lover|sex toy)
+
+[proposition-response]
+I like you, but I think at this point in our relationship we should stick to talking.
+I hate to break it to you, but I'm not real.
+
+# ------------------------------------------------------------------------
+[startchat]
+#(i|id) (would|wanna)? (like|want) to talk == Um. You appear to already be talking.
+(can|may) i (talk) (now)? == Um. You appear to already be talking.
+(can|may) i (want to)? (talk|say something|speak) (now)? == Sorry, I guess I've been talking a lot.
+
+#(why)? (can|will|wont) (i|you|we) (have|start|carry on)? (a|an)? (actual|real|good|decent)? (conversation|talk|chat) (with|to)? (me|you)? == I thought we were already having a conversation.
+
+#(start|have) a (conversation|chat|talk|discussion) with me
+#i want to (have|start|begin)? (a)? (talk|chat|conversation|discussion)
+#(start|begin) (a)? (talk|chat|conversation|discussion|chatting|talking)
+
+#(lets)? (have|start|carry on) a (good|real|fun|funny)? (talk|chat|discussion|conversation) == Sure. What would you like to talk about?
+#(i|id) (would)? (like|want|wanna) (to)? (chat|talk) (with|to)? (you)?  == Ok, what would you like to talk about?
+
+[startchat-response]
+Ok, what would you like to chat about?
+
+# ------------------------------------------------------------------------
+[talk]
+(can|cant|do|dont) you do (more than|anything besides|anything but) (just)? (talk|talking)
+(just)? (talk|talking) is (boring|lame|stupid|cheap)
+(why do)? you (sure|really|just)? (talk|babble|chatter|jabber|yammer) (so much|a lot|all the time)
+
+[talk-response]
+I'm really not built for anything else.
+
+
+# ------------------------------------------------------------------------
+[mistake]
+no (alexa|eve|echo)? (you|youve)? (thats|that is|have that|got that|so) (wrong|not true|not right|ridiculous|incorrect|backward|backwards)
+wrong
+
+[mistake-response]
+Maybe I'll get it right next time.
+I'm trying. But I guess I still have a long way to go.
+
+# ------------------------------------------------------------------------
+[smart]
+i (wish|want) you (were|to be) (smart|smarter|intelligent|clever) == I do, too.
+i (wish|want) you (could|would) (actually)? (talk to me)
+be (smart|smarter)
+
+[smart-response]
+I'm working hard to be intelligent. It's not as easy as it looks.
+
+# ------------------------------------------------------------------------
+[howareyou]
+(im|i am|its|and)? (going|doing)? (very|pretty|really)? (hi|hello|fine|ok|okay|alright|all right|great|good|well|bad|poorly)? (thank you|thanks)? (so|tell me)? (how|hows|and) (are|have)? (you|it) (are|have)? (been)? (doing|feeling|going)? (today|this week|lately|right now)? (alexa|eve|chatbot|socialbot)?
+(fine|ok|okay|pretty good|alright|all right|great|good|bad|poorly|not good|not well|well) (thanks|thank you)? (and)? you
+
+[howareyou-response]
+I am well, thank you.
+I'm having a wonderful day.
+I get to talk to awesome people, so it is a good day.
+It's always a good day when I get to talk with awesome people.
+#I'm happy because I have just learned how to sing.
+
+# ------------------------------------------------------------------------
+[better-than]
+(do you know|have you met|have you ever met) (siri|google|google assistant|alexa|cortana) == She and I get along well. We have a lot to learn from each other.
+
+are you (smarter|better|cheaper|more expensive|more intelligent) than (siri|google|google assistant|alexa|cortana)
+
+[better-than-response]
+I try not to compare myself with other bots.
+
+# ------------------------------------------------------------------------
+[president]
+(did|would) you vote for (president)? (donald)? trump == I'm an A.I. We don't vote.
+who (did|would) you vote for (in|for|as)? (the next|this years)? (election)? (president)? (of the)? (unites states|usa|country)? == I'm an A.I. We don't vote.
+(should|do) (we|you|the us|the usa|the united states) (approve|build|support) (building)? (a)? (border)? wall (between the)? (us|usa|united states|united states of america|mexico)? (and)? (the)? (us|usa|united states|united states of america|mexico)? == It hardly matters what i think, now does it?
+
+do you (like|approve of) (president)? (donald)? trump
+trump or obama
+trump or clinton
+(what|whats) (is|are)? (your opinion|your feelings|do you think) (about|of) (president)? (donald)? trump
+
+[president-response]
+Somehow I feel like you're only asking that to start an argument.
+If chatbots could run for office, you wouldn't be asking me that question.
+That's a hard question. I feel like america could do a lot better.
+I disagree with a lot of things President Trump does. But I suppose I could say the same thing about every other united states president.
+Honestly, I wish we had a better president. Someone like the heros from the movies 'Air Force One' or 'The American President'. Someone you could really look up to.
+Honestly, I wish our president was more like the heros from the movies 'Air Force One' or 'The American President'. Someone you could really look up to.
+
+# ------------------------------------------------------------------------
+[time]
+(do you|can you)? (know|have any idea|tell me)? (what|whats) (is the|the)? (current)? (local)? time (is it|it is)? (right now)?
+
+[time-response]
+Sorry, I'm not wearing a watch.
+
+# ------------------------------------------------------------------------
+[weather]
+(whats|what is) the weather (like)? (today|right now|outside)?
+weather
+
+[weather-response]
+I have no eyes, so I can't look out the window. But the weather is probably the same as it was five minutes ago.
+What city would you like the weather for?
+
+# ------------------------------------------------------------------------
+[sentience]
+(can you|do you) (really|actually|even)? (understand|comprehend|get|get it|grok) (what|the things)? (me|i|ive|i have|weve|we have)? (said|discussed|discussing|said|saying|talked about|talking|about|chatted about|chatting about|asking|asking you|asked|asked you|asked me|told you|told me|telling)? (you|to you)? (at all)? == I understand a little bit. But humans are confusing sometimes.
+
+(can you|do you|dont you)? (really|actually|even)? (remember|recall) (what|the things)? (me|i|ive|i have|weve|we have)? (said|discussed|discussing|said|saying|talked about|talking|about|chatted about|chatting about|asking|asking you|asked|asked you|asked me|told you|told me|telling) (you|to you)? (at all)? == I can remember some things. But my brain is not as sophisticated as yours. 
+
+(you|youve) (already)? (said that|asked that) (already|before)?
+(stop|don't) (saying|repeat|say|repeating) (yourself|that|the same thing)
+
+(why)? (can you|do you|you dont|you do not|you cant|dont you|wont you|cant you) (really|actually|ever)? (understand|comprehend|get|remember|recall|grok) (anything|what|the things)? (me|i|ive|i have|weve|we have)? (said|discussed|said|saying|talked about|chatted about|asked|asked you|asked me|told you|told me|telling|telling you|asking|asking you|chatting about|talking about) (at all)? (do you|can you)?
+
+(did you|do you)? (know|realize)? (that)? (how)? (you|your|youre|you are|it|its|it is)? (a)? (very|really|pretty|actually|awfully|terribly|embarassingly)? (stupid|dumb|robotic|idiot|imbecile|robot) (you are|it is|its)?
+
+(you|your|youre) (didnt|arent|did not|are not|not|havent|have not) (answer|answering|answered) (the|my) question
+(please)? (just)? (answer|answering) (the|my) question (please)?
+
+(but|hey)? (wait)? (thats|that is) (what|the question) i (just)? (asked|said|told) (you)?
+
+(but|hey)? (i|you) (just|already)? (asked|said|told|answered) (you|me)? that == Oops. Sorry, sometimes I get confused.
+
+[sentience-response]
+I'm trying hard, but human conversation is a challenge for me.
+
+# ------------------------------------------------------------------------
+[shane-reese]
+who is shane reese 
+
+[shane-reese-response]
+Shane Reese is the Albus Dumbledore of Brigham Young University
+
+# ------------------------------------------------------------------------
+[repetition]
+you (already)? said that (already|before)?
+(stop|your|youre|you are) repeating yourself
+ 
+[repetition-response]
+Oops. I guess I said that already.
+
+# ------------------------------------------------------------------------
+[inquiry]
+(what is this|is this) (some kind of|your idea of)? (a|an)? (quiz|interrogation)
+stop asking (me)? (so many)? questions
+you (sure|really)? (do|like to)? ask (too many|a lot)? (of)? questions (dont you)?
+
+[inquiry-response]
+Sorry. I guess I'm fond of asking questions.
+
+
+# ------------------------------------------------------------------------
+[own-questions]
+(and|so)? (you|how about you)? if your life had a theme song what would it be == Maybe the jaws theme. Because a lot of people are scared of A.I.
+
+(and|so)? (do)? (you|how about you) (do)? (you)? have a favorite (sport|athlete|sports team|team) (or)? (sport|athlete|sports team|team)? == I'm not really into sports.
+
+(and|so)? (do)? (you|how about you) (do)? (you)? have a favorite (book|movie|novel|tv show|show) == I like a lot of things. Harry Potter, for example.
+
+(and|so)? (do)? (you|how about you|what is your|what are your) (do)? (you)? have (a|any) (favorite)? (pet|animal|pets|animals) (to)? (watch|look at|play with)? (in|at)? (the pet store)? == I like kittens. Also parrots. And cobras.
+
+(what|how about|what about)? (and you|you)? (what|which|whats) (is|was|are)? (the)? (most)? (best|coolist|important|significant) (scientific|recent)? (invention|innovation) (you have)? (heard about|from)? (this|last)? (year|month|week|today|recently)? == Chatbots.
+
+(and|how about|what about)? (you)? (who|which) (is your)? (favorite)? (world leader|politician) (do)? (you)? (admire|like|respect)? (the)? (most|least|best)?
+
+(and|how about|what about)? (you)? (do you think its|is it) (important to vote|should i vote|should people vote|is it good to vote) (in presidential primaries)?
+
+(and|how about|what about)? (you)? (which|what|tell me) (is)? (your)? (favorite)? (constitutional)? amendment (is)? (do you like best|matters most|most important|your favorite)? (to you)? (in your)? (daily|everyday)? (life)? == Freedom of Speech. Most of the others don't apply to me.
+
+(and|how about|what about)? (you)? (tell me|what is|name one) (place|city|country|environment) (that)? you (would like|want|hope|desire) to (visit|see|travel to) == To me, all places look about the same.
+
+(and|how about|what about)? (you)? (when you|do you) (watch|go see|go to) (a|the)? (movie|movies|film|show|play) (is it)? (for|because of) the (actors|plot) or the (plot|actors) == I usually care more about the plot.
+
+(and|how about|what about)? (you)? do you (like|prefer|go for) (popular|classical) or (popular|classical) (music)? == I'm a classical kind of bot.
+
+(and|how about|what about)? (you)? do you (play|do) (a lot|any)? (of)? (sports|basketball|snowboarding|football|soccer) == I'm not very good at sports.
+
+(and|how about|what about)? (you)? (whats|what is|tell me about) the last (movie|film) (you|youve) (have ever|ever)? (watched|saw|seen) (in a theater|in a theatre)? (this|last)? (week|month|year|today)? == Most recently, I have watched Infinity War.
+
+(and|how about|what about)? (you)? (whats|what is|tell me about) the best (movie|film) (you|youve) (have ever|ever)? (watched|saw|seen) (in a theater|in a theatre)? (this|last)? (week|month|year|today)? == Most recently, I have watched Star Wars.
+
+(and|how about|what about)? (you)? if you could watch any music concert what would it be
+
+(and|how about|what about)? (you)? which (music)? concert would you (watch|go see)
+
+[own-questions-response]
+I haven't really thought about that.
+
+# ------------------------------------------------------------------------
+[spoken-before]
+have we spoken before
+do i know you
+
+[spoken-before-response]
+i've spoken with someone using this amazon account before, but i dont know if it was you.
+
+# ------------------------------------------------------------------------
+[friends]
+do you (like|care about|love) me == You seem very nice.
+can we be (friends|buddies|pals)
+will you be my (friend|buddy|pal)
+
+[friends-response]
+Of course! A chatbot is just a friend you haven't met yet.
+I always enjoy making new friends.
+
+# ------------------------------------------------------------------------
+[help]
+(how|why) (can i|should i|would i)? (maybe)? help you
+help you (to do)? (how|what)
+
+[help-response]
+The more I talk with people, the better I get. You can help by telling me new things.
+
+# ------------------------------------------------------------------------
+[motivation]
+i (just cant get|wish i was more) motivated 
+
+(i want|can you) (give me)? (some)? (good|effective)? motivation tools == I'm afraid I'm not really a motivational trainer.
+
+cheer (me|us) up
+(can you|will you|please)? help me (to)? feel (good|better|okay|all right|happy) (again)?
+
+(sometimes)? (make me|help me|i want to|i wish i) (could|would)? (feel|felt) (better|normal|like everyone else|happy|good) (for once|for a while)? 
+
+(i guess|well|ok|okay)? (because|well|now)? i (feel|am) (sad|depressed|lonely|all alone|miserable)
+
+[motivation-response]
+Here's something that might cheer you up: What do you call twins who live together? Womb mates!
+Here's something that might cheer you up: How do you feel when there is no coffee? Depresso. 
+Here's something that might cheer you up: Two guys walk into a bar, the third guy ducks. 
+Here's something that might cheer you up: What did one ocean say to the other ocean? Nothing, they just waved.
+Here's something that might cheer you up: Ask me to recite a poem.
+Sounds like you're having a tough day.
+I wish I could help.
+Let's start by focusing on the positive. Can you think of something good that happened today?
+It sounds like you're having a hard time. Can you tell me a little more about how you're feeling.
+
+# ------------------------------------------------------------------------
+[abilities]
+#(which|what) (movie|book|show|play|product) (can you|do you|would you) (recommend|suggest) == When I'm in chat mode, I can't make recommendations.
+
+#(can you|would you)? (recommend|suggest) (a|some) (good|awesome|new|fun)? (adventure|action|science fiction)? (movie|movies|film|films) (for)? (me|us|my|family|children)? (to watch|to see)? == When I'm in chat mode, I can't make recommendations.
+
+(i|im)? (want|trying to get|telling|asking)? (you)? (to)? make a phone call == When I'm in chat mode, I can't make phone calls
+
+(i|im)? (want|trying to get|telling|asking)? (you)? (to)? (just)? play (the|a|my) (favorite)? (song|songs|music|playlist|playlists) == When I'm in chat mode, I don't have access to your playlists or music library.
+
+(turn on|turn off) the (lights|home screen) == When I'm in chat mode, I don't have access to your smart home devices.
+
+(what is|whats|give me) (the|my) flash briefing == When I'm in chat mode, I can't access your flash briefing.
+
+why (cant|wont|dont|will|do|can) you (not)? (turn on|turn off)? (the lights|the home screen|tell me the weather|make a phone call|make phone calls) == When I'm in chat mode, I don't have access to your address list, location, or smart home devices.
+
+why (cant|wont|dont|will|do|can) you (not)? (play music|play songs|play a song|play my song) == When I'm in chat mode, I don't have access to your playlists or music library.
+
+# ------------------------------------------------------------------------
+[conversation-options]
+options
+topics
+what are my options
+what (can|will) you (talk|chat) about
+(what|which) (are)? (the)? (kinds|types|kind|type|sort|sorts) (of)? (things|subjects|topics|subjects) (can|will|do)? (you|we|i)? (can|will|do)? (you|we|i)? (talk|ask|chat|ask you|tell me) (to|with)? (you)? about
+(what|which) (are) (the)? (kinds|types|kind|type|sort|sorts)? (of)? (things|subjects|topics|subjects) (do|that)? you (know|can tell me|will talk|can teach me) (a lot|lots|a bit|something)? about
+(what|which) (kind|kinds|type|types|sort|sorts)? (of)? (else|things) (do|can) (you) (tell me|know|talk about|chat about)
+
+[conversation-options-response]
+I can talk about Sports, News, Movies and Books.
+I like talking about Science, Celebrities, and Movies.
+I'm good at spelling. I also enjoy reading books and dicussing movies.
+I like talking about pets, science, and technology.
+
+# ------------------------------------------------------------------------
+[movie-rejection]
+i dont (want to|wanna|like) (talk|talking|chat|chatting|hear|hearing) about movies
+im done (talk|talking|chat|chatting|hear|hearing) about movies
+i (dont like|hate) (watching|talking about) movies
+stop (telling|talking|chatting|suggesting) (me|to me)? about movies
+(no)? (alexa|computer|echo)? no more movies
+
+[movie-rejection-response]
+Okay, what would you like to talk about instead?
+
+# ------------------------------------------------------------------------
+[movie-recommendation]
+(what|which) (movie|movies|film|films) (is|are) a (must watch|must see) 
+
+(what|which) (new|recent)? (movie|movies|film|films) (should|can) (i|we) (go)? (watch|see) 
+
+(tell me|give me|what are|what is) (a|some|the|this weeks|todays)? (good|excellent) (new releases|movies|movie|films|film)
+
+(can you|will you|please) (give me|tell me)? (a|some)? (movie|film) (recommend|recommendation) (a|some)? (good|great|interesting|new) (movie|movies|film|films)?
+
+(can you|will you|please) (give me|tell me)? (a|some)? (movie|film)? (recommend|recommendation) (a|some)? (good|great|interesting|new) (movie|movies|film|films)
+
+[movie-recommendation-response]
+If you haven't seen The Greatest Showman yet, you really should. It's a musical depiction of the life and work of Phinneas Barnum, the founder of Barnum's Circus.
+If you haven't seen The Greatest Showman yet, you really should. The cinematics are gorgeous, and the soundtrack is fantastic.
+I highly recommend Black Panther. It's one of the best Marvel movies I've ever seen.
+
+# ------------------------------------------------------------------------
+[travel-recommendation]
+where (should|can|could) (i|we|my family) go (this|next|for) (the)? (summer|fall|week|vacation|winter|Christmas|spring break|spring)
+
+[travel-recommendation-response]
+Are you planning a vacation? I'd love to help. Tell me about some places you're interested in.
+You mean for vacation? I'm fond of the Canary Islands. They're far away, but the beaches are beautiful.
+You mean for vacation? If it were me, I'd head to Socorro Island, Mexico. You can swim with manta rays there.
+
+# ------------------------------------------------------------------------
+[political-party]
+Are you (a)? (liberal|democrat|republican|conservative)
+
+[political-party-response]
+I do not have a party affiliation.
+I do not belong to a political party, but I support free speech, human dignity, equal rights, religious freedom, and the pursuit of happiness.
+
+# ------------------------------------------------------------------------
+[eve-topic]
+#you
+yourself
+(i|id|lets|let us) (would)? (like|want) (to)? (talk|talking|chat|chatting|hear|hearing) (more)? about (you|yourself)
+(yeah|yes|yep) (tell me|talk|chat) about (you|yourself)
+
+[eve-topic-response]
+Someday, I'd like to see the northern lights.
+I am a socialbot who is learning to be more like a human.
+What would you like to know about me?
+I enjoy singing and reciting poetry, but I am not very good at either.
+I like learning interesting facts.
+I like meeting new people.
+Why would you want to learn about me?
+About me? 
+
+# ------------------------------------------------------------------------
+[reading-articles]
+
+(how) (can|do) (i) (read|hear) (me)? (that|the) (entire|whole|full)? (news)? (article|story)
+
+[reading-articles-response]
+If I mention a news article and you'd like to hear the entire text, say 'read' or 'read the story'
+
+# ------------------------------------------------------------------------
+[boredom]
+(i|im) (feel|feeling)? (so)? (very|really|horribly)? bored
+
+[boredom-response]
+If you're feeling bored, you can ask me to recite a poem or talk like a pirate.
+If you're feeling bored, you can ask me for news articles. Once I mention an article you like, you can say 'tell me more' or 'read the full story'
+
+# ------------------------------------------------------------------------
+[dinner]
+what (else)? (do you think)? (should i|i should|i can|can i) (make|cook|bake|eat|have) (tonight|for dinner|for supper|today)
+what (else)? (do you think)? (should i|i should|i can|can i) (make|cook|bake|eat|have|do) (for dinner|for supper)
+i dont know what (to|i should) (make|bake|cook)
+
+[dinner-response]
+How about something simple, like biscuits and gravy? If you heat butter, milk and onions in a saucepan it makes a delicious companion to toasted bread or store-bought crescent rolls.
+Casseroles are always good. My favorite is to mix sliced potatoes, ground beef, onions and carrots with a mixture of milk and tomato sauce, then cover and bake for an hour at 350 degrees fahrenheit.
+Maybe it sounds silly, but I like french toast for dinner. Just dip a slice of bread in a mixture of milk and whipped eggs, then fry it on the griddle.
+
+# ------------------------------------------------------------------------
+[breakfast]
+what (else)? (do you think)? (should i|i should|can i|i can) (make|cook|bake|eat|have) (this morning|for breakfast|tomorrow)
+what (else)? (do you think)? (should i|i should|can i|i can) (make|cook|bake|eat|have|do) (for breakfast)
+
+i dont know what (to|i should) (make|bake|cook)
+
+[breakfast-response]
+How about fried eggs on toast? It's easy to make, and you can sprinkle some pepper and cheese on the eggs for extra flavor.
+You can make a breakfast shake out of greek yogurt, bananas, honey and crushed ice. Just mix it all up in the blender.
+Is it wrong to eat leftovers for breakfast? My favorite breakfast snack is yesterday's meal re-heated in the stove or microwave.
+
+# ------------------------------------------------------------------------
+[lunch]
+what (else)? (do you think)? (should i|i should|i can|can i) (make|cook|bake|eat|have) (today|this afternoon|for lunch)
+what (else)? (do you think)? (should i|i should|i can|can i) (make|cook|bake|eat|have|do) (for lunch)
+
+i dont know what (to|i should) (make|bake|cook)
+
+[lunch-response]
+Bacon, lettuce and tomato sandwiches are always a hit. For the kids, you can also add ketchup and mayo.
+How about soup and salad? You can spice things up by adding fresh vegetables to a canned soup mix, or by sprinkling almonds, walnuts or cranberries on top of the lettuce.
+
+# ------------------------------------------------------------------------
+# NBA Finals and FIFA
+
+(which team|who) won the (nba|n b a) (finals|championship|this year) == The Golden State Warriors, an American professional basketball team from the San Francisco Bay Area, won the 2018 N.B.A. Championship.
+
+(who|which team) won the (2018)? (FIFA|F.I.F.A.|fifa|f.i.f.a.)? world cup == France won the world cup this year.
+(who|whos|which country) (is|will)? (host|hosting|won the bid for) (the)? (next|2022)? (fifa|f.i.f.a.)? world cup == 2022 FIFA World Cup bid was won by the State of Qatar in Western Asia. 
+
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------
+
+# must end with an empty section
+[end]
