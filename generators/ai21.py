@@ -6,7 +6,7 @@ from transformers import  Trainer, TrainingArguments
 from generators.response_generator_base_class import ResponseGenerator
 import requests
 
-
+#This line of code throws an error when missing the API key
 API_KEY = '************************************'
 MAX_TOKENS = 50
 TEMPERATURE = 1.0
