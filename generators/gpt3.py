@@ -11,6 +11,7 @@ import requests
 import os
 import openai
 
+#This line of code throws an error when missing the API key
 openai.api_key = "*************************"
 
 
