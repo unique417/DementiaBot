@@ -34,7 +34,6 @@ class EmoBotResponseGenerator(ResponseGenerator):
             previous_response = self.input_data['previous_response']
 
 
-            # ADDED by Nancy
             # Don't trigger on one-word answers that weren't preceded
             # by a 'how are you doing?' inquiry. Otherwise the bot
             # askes a yes/no question, the user says 'Okay', and
